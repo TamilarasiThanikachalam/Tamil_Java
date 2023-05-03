@@ -86,7 +86,7 @@ table - 10
 
 people, chair, table - data type 
 
-People - 100 - count 100 - data type and variable 
+People - 100 - chair 100 - data type and variable 
 One person in that people name is Sathya - name 
 
 Taluk office building 
@@ -171,7 +171,7 @@ clerk in taluk office, we take as constructor
 Project
 	package1
 		InterfaceA
-		ClassA (variables/methods)
+		ClassA (Datatype/variables/methods)
 			ClassAA 
 			ClassAB
 		ClassB
@@ -201,12 +201,12 @@ Project
 
 * Project - consist of package/packages/file/files/folder/folders/source(src)folder
 
-* static - static means belongs to the class. If govt hospital is class, then hospital receptionist is a static member of that class. We can not seperate them
-			variables and methods can be static
+* static - static means belongs to the class. If govt hospital is class, then hospital receptionist is a static member of that class. 
+We can not seperate them variables and methods can be static
 			within a class - static can be used anywhere directly (in a static method or in non-static method)
 			Outside calss - static can be used but alone with class name. (in a static method or in non-static method)
 
-* Object (instatioation or initiation)  - E.g: Medical camp; 
+* Object (instatiation or initiation)  - E.g: Medical camp; 
 			We create Object only for classes; Whenever we create object we copy whatever the class contains(except static)
 			means, only non-static is copied
 			Through object we can not call static things.
@@ -217,6 +217,271 @@ Project
 				2. only with money
 				3. only with permission
 				4. with both money and permission
+				
+				
+*******************************************************************
+DAY 3(03/05/2023)
+
+Class - important thing, through which we perform some task. Class may contains methods and variables
+
+Method1 - A work
+Method2 - B work
+Method3 - C work ( A work + some other work)
+
+redundant - repeatable 
+reuse
+
+Variables - shape and count/name
+shape - datatype 
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Datatype: Its a classification of a data, which tells the compiler or interpretor about how the programmer intends to use the data.
+
+1) Primitive
+	a) boolean - yes or no OR true or false 
+	b) Textual 
+		char - a, b, c, A, B
+		byte - 
+			byte x = 10;
+	c) numeric 
+		int 
+		short
+		double
+		long
+		float
+
+2) Non Primitive
+	d) String 
+	e) array
+
+each datatype has a default value
+
+* default value of String is null
+* default value of int is 0
+* boolean - false
+
+How we declare datatypes
+Syntax = accessModifier dataType variableName/variable = variableValue
+
+int a = 10;  
+int a;
+String a = "10";
+String a;
+String a = null; (null is a keyword here, it means String a has nothing.)
+String a = "null"; ("null" is a String/word here.)
+double a = 10d;
+char sathya = 'A';
+boolean Boolean = true;
+
+int a; - declare
+a = 10; - define/initiate
+
+int a = 10;
+int - data type( primitive --> numeric)
+a - variable/variableName;
+10 - value posses by the variable/ value pointed by the variable
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+Variables - Its a memory location that can hold values of a specific datatype.
+
+Types of variables 
+1. Local variable - 
+	* Datatype declared/initiated within a method/constructor, for, if    -- block ({...})
+	* scope of local variable is only within the block in which the variable is declared
+	* intialisation of local variable is madatory
+	* local variables can not be static
+	{
+	int a = 10;
+	char c;
+	c = 20;
+	String sathya = "10";
+	}
+	
+2. Instance variable/class variable/non-static variable
+	* Declared within a class but outside of a block ({...})
+	* Non- static variables
+	* To access instance variables, we need to create object
+	
+	int a = 10;
+	String sathya = "10";
+	
+	
+3. static variable
+	* Declared within a class but outside of a block
+	* static keyword is used with variables and methods
+	* To access this variable, dont need to create an object
+	* within a class - static can be used anywhere directly (in a static method or in non-static method)
+	* Outside class - static can be used but along with class name. (in a static method or in non-static method)
+	
+	static int a = 10;
+	static String sathya = "10";
+	
+	ClassA (TalukOffice) {
+
+static int a = 10;
+//a = receptionist;
+
+method1() {
+
+print (a);
+
+
+}
+
+}
+
+
+ClassB (Govt hospital) {
+
+method2() {
+print (ClassA.a);
+//print (TalukOffice.receptionist)
+}
+	
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+	
+Access Modifier
+	* It defines where and who can use a method/variable/class
+	1) default
+	2) private
+	3) protected
+	4) public 
+	
+	Syntax = accessModifier dataType variableName/variable = variableValue
+	int a = 10; - default (no need to mention "default" word
+	private int a = 10;
+	protected int a = 10;
+	public int a = 10;
+	
+	
+	packageA
+		classA ( public int a = 10)
+			ClassAA (same package and sub class of A)
+		classB (same package but non sub class of A)
+	packageX
+		classX (diff package non sub class)
+		classXA (diff package but sub class of A)
+		
+	
+
+                                     | default |  private  | protected  | public 
+									 |         |           |            | 
+classA ( int a = 10)                 | yes     | yes       | yes        | yes
+									 |         |           |            |
+same package but sub class           | yes     | no        | yes        | yes 
+									 |         |           |            |
+same package but non sub class       | yes     | no        | yes        | yes
+									 |         |           |            |
+different package but sub class      | no      | no        | yes        | yes
+									 |         |           |            |
+different package but non sub class  | no      | no        | no         | yes
+
+ClassA {
+
+int a = 10;
+private int b = 100;
+protected int c = 20;
+public int d = 15
+
+method1() {
+print (a); - No compile time error
+print (b);
+print (c);
+print (d); 
+}
+
+}
+
+ClassAA {
+
+method1() {
+print (a); 
+print (b);
+print (c);
+print (d); 
+}
+}
+
+ClassB {
+
+method1() {
+print (a); 
+print (b);
+print (c);
+print (d); 
+}
+}
+
+################################
+JVM, JRE, JDK
+
+our codes - english - .java
+compile - .class - byte code (machine recognizable language)
+
+
+JVM - Java Virtual Machine 
+* This can not be seen
+* it starts the execution(creates Runtime Environment)
+* It first checks for main method
+* It creates the code flow, in java the flow is called "Thread" 
+* JVM provides run time environment in which Java byte codes can be executed
+* loads code| verifies code| execute code| provides run time environment
+
+JRE - Java Runtime Environment
+* Physically exist
+* Contains JVM and set of libraries
+* JVM uses these libraries to execute the codes
+
+JDK - Java Developement kit
+* It contains JVM, set of libraries and dev tools (JRE + dev tools)
+* Used to develop and execute the codes
+* Dev tools + debugger + compiler + java doc
+
+**************************************************************************
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				
 				
 				
