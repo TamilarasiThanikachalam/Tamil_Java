@@ -1,0 +1,264 @@
+Day 1 (04/27/2023)
+	* Explaining basics of Git and Eclipse
+	* Created git account
+	* Created a maven project
+	* pushed local project into online 
+	* added collaborator
+	
+Day 2 (04/28/2023)
+	* Importing a project from remote to local (Cloning)
+	* General things about Java
+		* everything in Java is Object (but there is a but) 
+		* Object has structure and it does a specific work
+	 
+Real time 
+
+Taluk Office
+
+* Marriage certificate, Income certificate, death certificate, Caste certificate
+
+Receptionist
+Clerk
+Broker
+
+building - Taluk office 
+
+Reception: 
+chairs
+table
+reception table 
+people 
+water
+newspaper
+pen
+Reception phone
+Rceptionist
+Receptionst personal phone
+documents
+camera
+system
+
+
+Marriage certificate room: 
+people
+chairs
+table
+camera 
+system 
+newspapre
+document
+pen
+water
+Personal phone
+common phone
+marriage certificates
+
+Income certificate room: 
+people
+chairs
+table
+camera 
+system 
+newspapre
+document
+pen
+water
+Personal phone
+common phone
+income certificates
+
+Access Modifer
+Personal things 
+common things
+
+
+each room is to do a specfic designated work. 
+	each room is called Method.
+	Method in java is to do a specific work
+	Whatever work you do, it should be a method or inside a method
+	Whatever happens inside a method is invisible to others
+	You can take reception room water bottle to any methods room but you can not take methods room(Income tax cert, Birth cert room, caste cert room etc) things to other places (there is a but)
+
+Structure 
+People - 50
+chair - 100
+table - 10
+
+people, chair, table - data type 
+
+People - 100 - count 100 - data type and variable 
+One person in that people name is Sathya - name 
+
+Taluk office building 
+	It is to do a set of work - marriage, income & other certificates
+	Marriage certificate method, Income certificate method, etc. (each of them are methods)
+	Class in java consist of many methods
+	Taluk office - Class
+
+
+People adminstration - package
+Chennai Taluk office - Class 
+	below are sub classes of Chennai Taluk office 
+Velachery Taluk office - Class 
+	Velachery east Taluk office - Class (He is sub class of Velachery class)
+Tambaram Taluk office - Class
+Guindy Taluk office - Class 
+
+* Sub classes of Chennai are Velachery, Guindy and Tambaram
+* Velachery east is sub class of Velachery 
+* Velachery east is same package of Tambaram but not a sub class of Tambaram
+
+Based on this only we created access modifier 
+
+
+Police department administration - package
+Chennai police station 
+Tambaram police station 
+
+Hospital administration - package 
+chennai hospital (Govt and private) 
+tambaram hospital 
+
+Law management - package
+Chennai court 
+Tambaram court 
+
+Chennai administration - project
+	People adminstration - package
+	Police department adminstration - package
+	Hospital administration - package 
+	Law management - package
+	
+
+* People adminstration have a set of rules
+* Police department have set of rules
+* Hopspital adminstration 
+	private hospital rules set
+	Govt hospital rules set 
+
+These rules set in Java are called interface
+
+Taluk office 
+	Receptionist - Chennai Taluk office receptionist
+	Reception Phone - Chennai taluk office phone 
+	Reception table - Chennai taluk office reception table 
+similarly for other classes too. 
+
+They are always belongs to their specific class  - static 
+	* Whenever we call a static member outside of class, we call them with their class name 
+	* within a class, we call static member directly (no need to call as Chennai Taluk office Receptionist)
+
+Velachery Govt hospital - class 
+	* They are scheduling a health checkup camp 
+		* In this case, they take doctors, nurses, medicines, operation room, cleaning room and other things from Velachery Govt hospital only
+
+Health checkup camp - Object name 
+Object we create for class only
+When creating object, they take/create copy of all the things in that class
+
+Tambaram police station wants health check up 
+* In Tambaram police station's campus, we create object for Tambaram Govt hospital health check up camp 
+
+Coming back to Taluk office 
+clerk in taluk office, we take as constructor
+
+* We just tell what you want 
+* you tell what you want with document
+* you tell what you want with document1, document2
+* you tell what you want with documents, amount
+* you tell what you want with amount
+
+Project
+	package1
+		InterfaceA
+		ClassA (variables/methods)
+			ClassAA 
+			ClassAB
+		ClassB
+		ClassC
+	package2
+		ClassA
+		ClassB
+	package3
+		ClassX
+		ClassA
+		
+
+* Class - It does a set of work. It consist of variables and methods. Each work would be done by methods. 
+
+* Methods - It does specific job. It always written inside a class
+
+* Variable - it can have type(Data type) and poses a number or name;
+			variables can have different access - access Modifier
+			
+* Access Modifier - defines where we can use a variable/method/class
+
+* Interface - It contains rules most of the time. Sometimes it does some work too(means method).
+			Interface is always followed by class/classes. 
+			When class follows interface, class should do the rule written in the interface
+
+* package - contains class/classes/interface/interfaces/file/files/folder/folders
+
+* Project - consist of package/packages/file/files/folder/folders/source(src)folder
+
+* static - static means belongs to the class. If govt hospital is class, then hospital receptionist is a static member of that class. We can not seperate them
+			variables and methods can be static
+			within a class - static can be used anywhere directly (in a static method or in non-static method)
+			Outside class - static can be used but alone with class name. (in a static method or in non-static method)
+
+* Object (instantiation or initiation)  - E.g: Medical camp; 
+			We create Object only for classes; Whenever we create object we copy whatever the class contains(except static)
+			means, only non-static is copied
+			Through object we can not call static things.
+
+* Constructor - Object creation happens with the help of constructor
+				constructor is available in different kind
+				1. without any money/permission
+				2. only with money
+				3. only with permission
+				4. with both money and permission
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
