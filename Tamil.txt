@@ -443,7 +443,83 @@ JDK - Java Developement kit
 **************************************************************************
 DAY 4(04/05/2023)		
 	
-				
+What is eclipse (IDE)
+
+Its an editor to edit and view your project or project files
+While writing itself, it will notify us about complilation errors
+
+Its a user interface to view your project or file in an easy way
+
+tab
+drag and drop
+
+* Perspective 
+	Few of the perspectives in Eclipse
+	* Java
+	* Debug
+	* Git
+	
+* window
+* Market place 
+* file search 
+* show view
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Maven
+
+GroupID
+Artifact ID 
+verision
+
+Facebook jar
+Meta 
+facebook
+version 1.1.100
+
+Insta jar
+Meta
+Insta
+version 10.1.10
+
+* Dependency Management tool
+* we dont need to download any jar files(dependency).
+* Group ID, Artifact ID and Version
+* If we create a project with mavan as a dependency management tool, we get a proper project structure.
+* Important file in maven project is pom.xml. In this file, we add dependency details 
+* Dependencies will be stored in .m2 folder
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Git (one of the SCM - source code management tools)
+
+We can store our project code in a proper structure. 
+It will help us to reduce time and many people can work on a project at a same time 
+
+1. Create a project in local (our system)
+2. Create git account
+3. Create a repo in your git account (remote)
+4. We view our local project in system through Eclipse
+5. We need to connect our Eclipse with Git repo
+
+upload project in Git
+
+Steps to upload project in Git hub
+
+1) Create a remote repository
+2) In your system open git bash from your project location
+3) enter below commands
+	git init
+	git add .
+	git commit -m "any message you can type here"
+	git remote add origin SSHURL
+	git push origin master
+	
+	
+	To view status:  git status 
+	to clear lines: clear
+
+			
 				
 				
 				
