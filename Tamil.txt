@@ -397,21 +397,23 @@ print (d);
 
 ClassAA {
 
+ClassA obj = new ClassA();
 method1() {
-print (a); 
-print (b);
-print (c);
-print (d); 
+print (obj.a); 
+print (obj.b);
+print (obj.c);
+print (obj.d); 
 }
 }
 
 ClassB {
 
+ClassA obj = new ClassA();
 method1() {
-print (a); 
-print (b);
-print (c);
-print (d); 
+print (obj.a); 
+print (obj.b);
+print (obj.c);
+print (obj.d); 
 }
 }
 
@@ -463,6 +465,8 @@ drag and drop
 * Market place 
 * file search 
 * show view
+
+For shortcuts - Ctrl+Shift+L
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -519,7 +523,216 @@ Steps to upload project in Git hub
 	To view status:  git status 
 	to clear lines: clear
 
-			
+*******************************************************************************************
+
+DAY 5(05/05/2023)
+
+Java keywords
+new, class, interface, abstract, access modifiers, data types, static, this, super, throw, throws, try, 
+catch, final, finally, data type, if, for, while, break, continue, switch
+
+* dont create variables and method names using java predefined keywords 
+* Java is case sensitive language (Sathya, sathya)
+
+Naming conversion in java
+* Should not use above things
+* homepage - homePage (Camel case)
+
+If you are creating package, package name
+* should start with small letter followed by camel case
+
+if you are creating class
+* should start with Captial letter followed by camel case
+
+thisIsPackageName 
+ThisIsClassName
+ThisIsInterfaceName
+
+thisIsMethodName
+thisIsObjectName or ThisIsObjectName
+thisIsVariableName
+
+package, method, object, variable - starts with small letter
+Class, Interface, Object - starts with Capital letter
+
+
+
+Syntax
+
+class 
+
+accessModifer class className {
+
+}
+
+e.g: public class GovtHospital {
+
+}
+
+
+method 
+
+accessModifer static/Non-static returnType methodName() {
+
+}
+
+static/Non-static accessModifer returnType methodName() {
+
+}
+
+public void thisIsNonStaticMethod() {
+
+}
+
+private static void thisIsStaticMethod() {
+
+}
+
+Methods in Java
+
+1) main method (static method)
+2) static method
+3) non static method
+
+Calling one method from another method
+
+* How calling a method differentiate within a class or outside class
+
+With in a class
+1. calling static method from non static method - direct call
+2. calling static method from static method - direct call
+3. calling non-static method from non-static method - direct call
+4. calling non-static method from static method - Object creation 
+
+
+Outside class
+	1. calling static method from non static method - using className
+	2. calling static method from static method - using className
+	3. calling non-static method from non-static method - Creating Object
+	4. calling non-static method from static method - Creating Object 
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Object creation - to call non-static methods
+
+Within class we can have both static and non-static member. 
+
+1) We create object only for class.
+2) In order to access non static members of a class, we create object and access the methods and variables
+
+Objection definition - Whenever we create an Object for a class, whatever non-static members(methods and variables) present in that class 
+				will be copied and stored in heap memory. We call non-static members through Object creation only.
+				
+What is heap memory? 
+
+Memory Management
+
+Heap memory
+Stack memory
+SCP (String Constant Pool - A part of heap memory)
+
+ClassA obj1 = new ClassA();
+
+ClassA - Class Name
+Obj1 - Object variable
+new = key word to create obj
+ClassA() - Constructor or Object creation or instance creation
+
+* Whenever we create an object for a class, whatever non-static variables and methods present in that class will be copied to heap memory
+* Object variable or instance variable, is stored in stack memory 
+* We can create multiple object for a single class
+
+public class ClassA {
+
+int a = 10; 
+
+public void method1() {
+
+}
+
+}
+
+	stack memory			Heap memory
+	obj1.				a = 10; method1();
+	obj2				a = 10; method1();
+	obj3				a = 10; method1(); 
+	
+	
+	
+int a = 10;
+* a = 10 - it will be stored in stack memory
+
+SCP:-
+There are two ways to create String in Java
+1. String Literals
+2. Object creation
+
+String Literals
+	String Sathya = "1000"; 
+	
+Object creation for String
+	ClassA obj1 = new ClassA();
+	String Sathya = new String("1000"); //its simple object creation
+
+Sathya - Stack
+1000 - SCP of Heap memory
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+String immutable:-
+
+String str = "Sathya";
+String str1 = "Sathya";
+String str2 = "Ranjith";
+
+In Memory it looks like
+stack 		SCP
+str			"Sathya" - 
+str1 		
+str2 		Ranjith
+
+str1 = str1 + str2;
+str1 = SathyaRanjith
+
+After manipulation what we think
+stack 		SCP
+str			"SathyaRanjith"
+str1 		
+str2 		Ranjith
+
+But what really happens in SCP memory.
+Whenever we manipulate String variable, String value never get changed. 
+Simply a new value is assigned to the manipulated String variable.
+
+stack 		SCP
+str			"Sathya" - 
+str1 		SathyaRanjith
+str2 		Ranjith
+
+str = str1 + str2;
+
+In SCP, after manipulation
+
+stack 		SCP
+str			SathyaRanjithRanjith ("Sathya" - will be in SCP but no one is looking for him)
+str1 		SathyaRanjith
+str2 		Ranjith
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Data types as variables:-
+Variables in Java
+
+Based on where we use our data types or variable names, we categories variables in 3 types 
+
+1. Local variable
+2. Class level or instance variable or non-static variable
+3. static variable
+
+
+
+
+		
 				
 				
 				
