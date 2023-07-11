@@ -448,7 +448,7 @@ DAY 4(04/05/2023)
 What is eclipse (IDE)
 
 Its an editor to edit and view your project or project files
-While writing itself, it will notify us about complilation errors
+While writing itself, it will notify us about compilation errors
 
 Its a user interface to view your project or file in an easy way
 
@@ -730,6 +730,14 @@ Based on where we use our data types or variable names, we categories variables 
 3. static variable
 
 
+
+
+  
+ 
+ 
+ 
+ 
+ 
 
 
 		

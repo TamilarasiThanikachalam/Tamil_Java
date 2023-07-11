@@ -219,6 +219,554 @@ Project
 				4. with both money and permission
 				
 				
+								
+				
+*******************************************************************
+DAY 3(03/05/2023)
+
+Class - important thing, through which we perform some task. Class may contains methods and variables
+
+Method1 - A work
+Method2 - B work
+Method3 - C work ( A work + some other work)
+
+redundant - repeatable 
+reuse
+
+Variables - shape and count/name
+shape - datatype 
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Datatype: Its a classification of a data, which tells the compiler or interpretor about how the programmer intends to use the data.
+
+1) Primitive
+	a) boolean - yes or no OR true or false 
+	b) Textual 
+		char - a, b, c, A, B
+		byte - 
+			byte x = 10;
+	c) numeric 
+		int 
+		short
+		double
+		long
+		float
+
+2) Non Primitive
+	d) String 
+	e) array
+
+each datatype has a default value
+
+* default value of String is null
+* default value of int is 0
+* boolean - false
+
+How we declare datatypes
+Syntax = accessModifier dataType variableName/variable = variableValue
+
+int a = 10;  
+int a;
+String a = "10";
+String a;
+String a = null; (null is a keyword here, it means String a has nothing.)
+String a = "null"; ("null" is a String/word here.)
+double a = 10d;
+char sathya = 'A';
+boolean Boolean = true;
+
+int a; - declare
+a = 10; - define/initiate
+
+int a = 10;
+int - data type( primitive --> numeric)
+a - variable/variableName;
+10 - value posses by the variable/ value pointed by the variable
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+Variables - Its a memory location that can hold values of a specific datatype.
+
+Types of variables 
+1. Local variable - 
+	* Datatype declared/initiated within a method/constructor, for, if    -- block ({...})
+	* scope of local variable is only within the block in which the variable is declared
+	* intialisation of local variable is madatory
+	* local variables can not be static
+	{
+	int a = 10;
+	char c;
+	c = 20;
+	String sathya = "10";
+	}
+	
+2. Instance variable/class variable/non-static variable
+	* Declared within a class but outside of a block ({...})
+	* Non- static variables
+	* To access instance variables, we need to create object
+	
+	int a = 10;
+	String sathya = "10";
+	
+	
+3. static variable
+	* Declared within a class but outside of a block
+	* static keyword is used with variables and methods
+	* To access this variable, dont need to create an object
+	* within a class - static can be used anywhere directly (in a static method or in non-static method)
+	* Outside class - static can be used but along with class name. (in a static method or in non-static method)
+	
+	static int a = 10;
+	static String sathya = "10";
+	
+	ClassA (TalukOffice) {
+
+static int a = 10;
+//a = receptionist;
+
+method1() {
+
+print (a);
+
+
+}
+
+}
+
+
+ClassB (Govt hospital) {
+
+method2() {
+print (ClassA.a);
+//print (TalukOffice.receptionist)
+}
+	
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+	
+Access Modifier
+	* It defines where and who can use a method/variable/class
+	1) default
+	2) private
+	3) protected
+	4) public 
+	
+	Syntax = accessModifier dataType variableName/variable = variableValue
+	int a = 10; - default (no need to mention "default" word
+	private int a = 10;
+	protected int a = 10;
+	public int a = 10;
+	
+	
+	packageA
+		classA ( public int a = 10)
+			ClassAA (same package and sub class of A)
+		classB (same package but non sub class of A)
+	packageX
+		classX (diff package non sub class)
+		classXA (diff package but sub class of A)
+		
+	
+
+                                     | default |  private  | protected  | public 
+									 |         |           |            | 
+classA ( int a = 10)                 | yes     | yes       | yes        | yes
+									 |         |           |            |
+same package but sub class           | yes     | no        | yes        | yes 
+									 |         |           |            |
+same package but non sub class       | yes     | no        | yes        | yes
+									 |         |           |            |
+different package but sub class      | no      | no        | yes        | yes
+									 |         |           |            |
+different package but non sub class  | no      | no        | no         | yes
+
+ClassA {
+
+int a = 10;
+private int b = 100;
+protected int c = 20;
+public int d = 15
+
+method1() {
+print (a); - No compile time error
+print (b);
+print (c);
+print (d); 
+}
+
+}
+
+ClassAA {
+
+ClassA obj = new ClassA();
+method1() {
+print (obj.a); 
+print (obj.b);
+print (obj.c);
+print (obj.d); 
+}
+}
+
+ClassB {
+
+ClassA obj = new ClassA();
+method1() {
+print (obj.a); 
+print (obj.b);
+print (obj.c);
+print (obj.d); 
+}
+}
+
+################################
+JVM, JRE, JDK
+
+our codes - english - .java
+compile - .class - byte code (machine recognizable language)
+
+
+JVM - Java Virtual Machine 
+* This can not be seen
+* it starts the execution(creates Runtime Environment)
+* It first checks for main method
+* It creates the code flow, in java the flow is called "Thread" 
+* JVM provides run time environment in which Java byte codes can be executed
+* loads code| verifies code| execute code| provides run time environment
+
+JRE - Java Runtime Environment
+* Physically exist
+* Contains JVM and set of libraries
+* JVM uses these libraries to execute the codes
+
+JDK - Java Developement kit
+* It contains JVM, set of libraries and dev tools (JRE + dev tools)
+* Used to develop and execute the codes
+* Dev tools + debugger + compiler + java doc
+
+**************************************************************************
+DAY 4(04/05/2023)		
+	
+What is eclipse (IDE)
+
+Its an editor to edit and view your project or project files
+While writing itself, it will notify us about compilation errors
+
+Its a user interface to view your project or file in an easy way
+
+tab
+drag and drop
+
+* Perspective 
+	Few of the perspectives in Eclipse
+	* Java
+	* Debug
+	* Git
+	
+* window
+* Market place 
+* file search 
+* show view
+
+For shortcuts - Ctrl+Shift+L
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Maven
+
+GroupID
+Artifact ID 
+verision
+
+Facebook jar
+Meta 
+facebook
+version 1.1.100
+
+Insta jar
+Meta
+Insta
+version 10.1.10
+
+* Dependency Management tool
+* we dont need to download any jar files(dependency).
+* Group ID, Artifact ID and Version
+* If we create a project with mavan as a dependency management tool, we get a proper project structure.
+* Important file in maven project is pom.xml. In this file, we add dependency details 
+* Dependencies will be stored in .m2 folder
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Git (one of the SCM - source code management tools)
+
+We can store our project code in a proper structure. 
+It will help us to reduce time and many people can work on a project at a same time 
+
+1. Create a project in local (our system)
+2. Create git account
+3. Create a repo in your git account (remote)
+4. We view our local project in system through Eclipse
+5. We need to connect our Eclipse with Git repo
+
+upload project in Git
+
+Steps to upload project in Git hub
+
+1) Create a remote repository
+2) In your system open git bash from your project location
+3) enter below commands
+	git init
+	git add .
+	git commit -m "any message you can type here"
+	git remote add origin SSHURL
+	git push origin master
+	
+	
+	To view status:  git status 
+	to clear lines: clear
+
+*******************************************************************************************
+
+DAY 5(05/05/2023)
+
+Java keywords
+new, class, interface, abstract, access modifiers, data types, static, this, super, throw, throws, try, 
+catch, final, finally, data type, if, for, while, break, continue, switch
+
+* dont create variables and method names using java predefined keywords 
+* Java is case sensitive language (Sathya, sathya)
+
+Naming conversion in java
+* Should not use above things
+* homepage - homePage (Camel case)
+
+If you are creating package, package name
+* should start with small letter followed by camel case
+
+if you are creating class
+* should start with Captial letter followed by camel case
+
+thisIsPackageName 
+ThisIsClassName
+ThisIsInterfaceName
+
+thisIsMethodName
+thisIsObjectName or ThisIsObjectName
+thisIsVariableName
+
+package, method, object, variable - starts with small letter
+Class, Interface, Object - starts with Capital letter
+
+
+
+Syntax
+
+class 
+
+accessModifer class className {
+
+}
+
+e.g: public class GovtHospital {
+
+}
+
+
+method 
+
+accessModifer static/Non-static returnType methodName() {
+
+}
+
+static/Non-static accessModifer returnType methodName() {
+
+}
+
+public void thisIsNonStaticMethod() {
+
+}
+
+private static void thisIsStaticMethod() {
+
+}
+
+Methods in Java
+
+1) main method (static method)
+2) static method
+3) non static method
+
+Calling one method from another method
+
+* How calling a method differentiate within a class or outside class
+
+With in a class
+1. calling static method from non static method - direct call
+2. calling static method from static method - direct call
+3. calling non-static method from non-static method - direct call
+4. calling non-static method from static method - Object creation 
+
+
+Outside class
+	1. calling static method from non static method - using className
+	2. calling static method from static method - using className
+	3. calling non-static method from non-static method - Creating Object
+	4. calling non-static method from static method - Creating Object 
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Object creation - to call non-static methods
+
+Within class we can have both static and non-static member. 
+
+1) We create object only for class.
+2) In order to access non static members of a class, we create object and access the methods and variables
+
+Objection definition - Whenever we create an Object for a class, whatever non-static members(methods and variables) present in that class 
+				will be copied and stored in heap memory. We call non-static members through Object creation only.
+				
+What is heap memory? 
+
+Memory Management
+
+Heap memory
+Stack memory
+SCP (String Constant Pool - A part of heap memory)
+
+ClassA obj1 = new ClassA();
+
+ClassA - Class Name
+Obj1 - Object variable
+new = key word to create obj
+ClassA() - Constructor or Object creation or instance creation
+
+* Whenever we create an object for a class, whatever non-static variables and methods present in that class will be copied to heap memory
+* Object variable or instance variable, is stored in stack memory 
+* We can create multiple object for a single class
+
+public class ClassA {
+
+int a = 10; 
+
+public void method1() {
+
+}
+
+}
+
+	stack memory			Heap memory
+	obj1.				a = 10; method1();
+	obj2				a = 10; method1();
+	obj3				a = 10; method1(); 
+	
+	
+	
+int a = 10;
+* a = 10 - it will be stored in stack memory
+
+SCP:-
+There are two ways to create String in Java
+1. String Literals
+2. Object creation
+
+String Literals
+	String Sathya = "1000"; 
+	
+Object creation for String
+	ClassA obj1 = new ClassA();
+	String Sathya = new String("1000"); //its simple object creation
+
+Sathya - Stack
+1000 - SCP of Heap memory
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+String immutable:-
+
+String str = "Sathya";
+String str1 = "Sathya";
+String str2 = "Ranjith";
+
+In Memory it looks like
+stack 		SCP
+str			"Sathya" - 
+str1 		
+str2 		Ranjith
+
+str1 = str1 + str2;
+str1 = SathyaRanjith
+
+After manipulation what we think
+stack 		SCP
+str			"SathyaRanjith"
+str1 		
+str2 		Ranjith
+
+But what really happens in SCP memory.
+Whenever we manipulate String variable, String value never get changed. 
+Simply a new value is assigned to the manipulated String variable.
+
+stack 		SCP
+str			"Sathya" - 
+str1 		SathyaRanjith
+str2 		Ranjith
+
+str = str1 + str2;
+
+In SCP, after manipulation
+
+stack 		SCP
+str			SathyaRanjithRanjith ("Sathya" - will be in SCP but no one is looking for him)
+str1 		SathyaRanjith
+str2 		Ranjith
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Data types as variables:-
+Variables in Java
+
+Based on where we use our data types or variable names, we categories variables in 3 types 
+
+1. Local variable
+2. Class level or instance variable or non-static variable
+3. static variable
+
+*******************************************************************************************
+Day 06 (09/07/2023)
+
+Maven: If we create a project with maven as a dependency management tool, we get a proper project structure.
+
+Java project & Maven project and their differences.
+
+1. Creating java project we need to import all the dependencies or jar files manually but 
+with the help of Maven project provides these jars files in the POM.xml which will be stored in .m2 folder on the file explorer.
+2. Maven dependencies will be available on Maven repository.
+
+Ex:
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.10.0</version>
+</dependency>
+
+3. Cloning and importing the Maven project from github
+ > a) Copy the SSH from github under the respective project repository by clicking the <>Code.
+ > b) Open git bash and type - git clone <SSH>
+ 
+ > c) Open the eclipse and right click, import > Existing Maven project > Browse the project in the file explorer and Finish.
+ 
+4. Creating branch and switching between branches
+ > a) click on the existing branch drop down and create a new branch where the all the codes/Files from the Master branch will be copied to the new branch
+ > b) Switching : Right click on the project in eclipse > click Team > switchTo > Other
+ Master will act like a prod and the new branch will be like a test DB. Changes can be made to these branch without affecting the master.
+ 
+5. Ignore the unwanted code / File to Remote - Need to create .gitignore without any extension (automatically saved as GITIGNORE FILE))
+and add the folders, documents which not supposed to be pushed to the Remote
+
+				
+				
+				
 				
 				
 				
