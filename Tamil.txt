@@ -5,6 +5,33 @@ Day 1 (04/27/2023)
 	* pushed local project into online 
 	* added collaborator
 	
+	Git: 
+		* Two or more people can work(edit) on same file or project at same time
+		* Time saving
+	
+	Eclipse:
+		* Easy and convenient to view and edit a file or project
+		* We can view the project in easy structural order so that, we can view or edit it easily
+		* Running a code also easy by simply clicking on a button
+		* while writing itself, complilation of code would happen.
+		
+	Maven:
+		* Dependency management tool
+		* We dont need to download a dependency and update it in our project
+		* By simply giving what dependency we want, Maven will download it and add it in our project
+		* along with this feature, maven also gives us a proper structure to view in any editing tools such as Eclipse, intelliJ.
+		* Maven dependencies are downloaded and stored in ".m2" folder in our system.
+		* Each dependencies has 
+			* Group Id (Meta)
+			* Artifact Id (Facebook or Insta or Threads or Whatsapp) 
+			* Version Number (Facebook 1.1, Insta 10.0.2, etc)
+		* Dependencies can be managed in a maven project by pom.xml file
+		
+	* How to create a simple java project
+	* How to add dependencies in the simple java project 
+	* How to create a maven project 
+	* How to add dependencies in a maven project
+	
 Day 2 (04/28/2023)
 	* Importing a project from remote to local (Cloning)
 	* General things about Java
@@ -21,7 +48,7 @@ Receptionist
 Clerk
 Broker
 
-building - Taluk office 
+building - Taluk office
 
 Reception: 
 chairs
@@ -226,7 +253,7 @@ Class - important thing, through which we perform some task. Class may contains 
 
 Method1 - A work
 Method2 - B work
-Method3 - C work ( A work + some other work)
+Method3 - C work ( A work + some other work = method1 + some other work)
 
 redundant - repeatable 
 reuse
@@ -260,8 +287,9 @@ each datatype has a default value
 * default value of int is 0
 * boolean - false
 
-How we declare datatypes
-Syntax = accessModifier dataType variableName/variable = variableValue
+How we declare variable
+Syntax = accessModifier dataType variableName/variable = variableValue (non static)
+Syntax = accessModifier static dataType variableName/variable = variableValue (static)
 
 int a = 10;  
 int a;
@@ -280,7 +308,7 @@ int a = 10;
 int - data type( primitive --> numeric)
 a - variable/variableName;
 10 - value posses by the variable/ value pointed by the variable
-
+If you want 10, you need to call 'a' only. 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -298,6 +326,7 @@ Types of variables
 	char c;
 	c = 20;
 	String sathya = "10";
+	static int b = 10; -- we can not create like this.
 	}
 	
 2. Instance variable/class variable/non-static variable
@@ -305,8 +334,19 @@ Types of variables
 	* Non- static variables
 	* To access instance variables, we need to create object
 	
-	int a = 10;
-	String sathya = "10";
+	classA {
+	int a = 10; //class level non static variable
+	String sathya = "10"; //class level non static variable
+	
+	method1() {
+	int  a = 10; // local variable
+	
+	sysout(sathya); // we can not use a non static like this. we need to create object
+	// it should be written as 
+	ClassA obj = new ClassA(); //object creation
+	sysout(obj.sathya);
+	}
+	}
 	
 	
 3. static variable
@@ -351,6 +391,7 @@ Access Modifier
 	4) public 
 	
 	Syntax = accessModifier dataType variableName/variable = variableValue
+		   = static accessModifier dataType variableName/variable = variableValue 
 	int a = 10; - default (no need to mention "default" word
 	private int a = 10;
 	protected int a = 10;
@@ -358,14 +399,15 @@ Access Modifier
 	
 	
 	packageA
-		classA ( public int a = 10)
+		classA ( int a = 10)
 			ClassAA (same package and sub class of A)
 		classB (same package but non sub class of A)
 	packageX
-		classX (diff package non sub class)
+		classX (diff package non sub class of ClassA)
 		classXA (diff package but sub class of A)
 		
 	
+How other ClassA and other Classes can use variable 'a' based on its access modifier.
 
                                      | default |  private  | protected  | public 
 									 |         |           |            | 
@@ -395,7 +437,7 @@ print (d);
 
 }
 
-ClassAA {
+ClassAA following ClassA{
 
 ClassA obj = new ClassA();
 method1() {
@@ -421,7 +463,8 @@ print (obj.d);
 JVM, JRE, JDK
 
 our codes - english - .java
-compile - .class - byte code (machine recognizable language)
+compile - .class - byte code (machine recognizable language). 
+			it is available in target folder.
 
 
 JVM - Java Virtual Machine 
@@ -448,7 +491,7 @@ DAY 4(04/05/2023)
 What is eclipse (IDE)
 
 Its an editor to edit and view your project or project files
-While writing itself, it will notify us about compilation errors
+While writing itself, it will notify us about complilation errors
 
 Its a user interface to view your project or file in an easy way
 
@@ -529,7 +572,7 @@ DAY 5(05/05/2023)
 
 Java keywords
 new, class, interface, abstract, access modifiers, data types, static, this, super, throw, throws, try, 
-catch, final, finally, data type, if, for, while, break, continue, switch
+catch, final, finally, data type, if, for, while, break, continue, switch, case;
 
 * dont create variables and method names using java predefined keywords 
 * Java is case sensitive language (Sathya, sathya)
@@ -541,7 +584,7 @@ Naming conversion in java
 If you are creating package, package name
 * should start with small letter followed by camel case
 
-if you are creating class
+if you are creating class or interface
 * should start with Captial letter followed by camel case
 
 thisIsPackageName 
@@ -564,6 +607,7 @@ class
 accessModifer class className {
 
 }
+
 
 e.g: public class GovtHospital {
 
@@ -599,17 +643,17 @@ Calling one method from another method
 * How calling a method differentiate within a class or outside class
 
 With in a class
-1. calling static method from non static method - direct call
-2. calling static method from static method - direct call
-3. calling non-static method from non-static method - direct call
-4. calling non-static method from static method - Object creation 
+1. calling static method/variable from non-static method - direct call
+2. calling static method/variable from static method - direct call
+3. calling non-static method/variable from non-static method - direct call or object creation
+4. calling non-static method/variable from static method - Object creation 
 
 
 Outside class
-	1. calling static method from non static method - using className
-	2. calling static method from static method - using className
-	3. calling non-static method from non-static method - Creating Object
-	4. calling non-static method from static method - Creating Object 
+	1. calling static method/variable from non static method - using className
+	2. calling static method/variable from static method - using className
+	3. calling non-static method/variable from non-static method - Creating Object
+	4. calling non-static method/variable from static method - Creating Object 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -647,22 +691,38 @@ public class ClassA {
 int a = 10; 
 
 public void method1() {
+	ClassA obj1 = new ClassA();
+	sysout(obj1.a);
+	
+	ClassA obj3 = new ClassA();
+	ClassA obj4 = new ClassA();
+}
 
+public void method2() {
+	ClassA obj2 = new ClassA();
+	sysout(obj1.a);
 }
 
 }
 
 	stack memory			Heap memory
-	obj1.				a = 10; method1();
-	obj2				a = 10; method1();
-	obj3				a = 10; method1(); 
+	obj1.				a = 10; method1(), method2();
+	obj2				a = 10; method1(), method2();
+	obj3				a = 10; method1(), method2(); 
+	
+	* In heap memory, only one copy of every class is available if you create multiple object 
+		for that class. So that we can save the memory space in heap memory.
 	
 	
-	
+public class ClassA {
 int a = 10;
-* a = 10 - it will be stored in stack memory
+}
 
-SCP:-
+int a = 10; //class level non static
+* a = 10 - When it comes to variable,  the variable and its value, 
+				both will be stored in specific stack memory 
+
+SCP:- String constant pool
 There are two ways to create String in Java
 1. String Literals
 2. Object creation
@@ -670,12 +730,15 @@ There are two ways to create String in Java
 String Literals
 	String Sathya = "1000"; 
 	
+Sathya - Stack
+1000 - SCP of Heap memory 
+	
 Object creation for String
 	ClassA obj1 = new ClassA();
 	String Sathya = new String("1000"); //its simple object creation
 
-Sathya - Stack
-1000 - SCP of Heap memory
+Sathya - Stack memeory
+1000 and methods/variables in String class - Heap memory 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -687,7 +750,7 @@ String str2 = "Ranjith";
 
 In Memory it looks like
 stack 		SCP
-str			"Sathya" - 
+str			Sathya 
 str1 		
 str2 		Ranjith
 
@@ -696,7 +759,7 @@ str1 = SathyaRanjith
 
 After manipulation what we think
 stack 		SCP
-str			"SathyaRanjith"
+str			SathyaRanjith
 str1 		
 str2 		Ranjith
 
@@ -705,7 +768,7 @@ Whenever we manipulate String variable, String value never get changed.
 Simply a new value is assigned to the manipulated String variable.
 
 stack 		SCP
-str			"Sathya" - 
+str			Sathya
 str1 		SathyaRanjith
 str2 		Ranjith
 
@@ -723,21 +786,31 @@ str2 		Ranjith
 Data types as variables:-
 Variables in Java
 
-Based on where we use our data types or variable names, we categories variables in 3 types 
+Based on where we create our data types or variable names, we categories variables in 3 types 
 
 1. Local variable
 2. Class level or instance variable or non-static variable
 3. static variable
 
+****************************************************************************************
 
+Methods in Java
+1) method without return type
+2) method with return type
+3) static method
+4) non static method
+5) parameterized method
+6) Non parameterized method
 
-
-  
- 
- 
- 
- 
- 
+METHODS CAN BE:
+135
+136
+145
+146
+235
+236
+245
+246
 
 
 		
