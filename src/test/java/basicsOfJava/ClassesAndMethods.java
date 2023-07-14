@@ -9,10 +9,11 @@ public class ClassesAndMethods {
 	
 	public static void main(String[] args) {
 		int a =10;
+		System.out.println(a);
 	}
 	
 	public static void method1() {
-		
+//		System.out.println(a);
 	}
 	
 	static public void method3() {

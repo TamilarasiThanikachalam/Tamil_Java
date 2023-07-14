@@ -3,10 +3,16 @@ package basicsOfJava;
 public class CallingMethods {
 
 	/*
-	 * With in a class 1. calling static method from non static method - direct call
-	 * 2. calling static method from static method - direct call 3. calling
-	 * non-static method from non-static method - direct call 4. calling non-static
-	 * method from static method - Object creation
+Calling one method from another method
+
+* How calling a method differentiate within a class or outside class
+
+With in a class
+	1. calling static method/variable from non-static method - direct call
+	2. calling static method/variable from static method - direct call
+	3. calling non-static method/variable from non-static method - direct call or object creation
+	4. calling non-static method/variable from static method - Object creation 
+
 	 */
 
 	public static void main(String[] args) {
@@ -30,18 +36,27 @@ public class CallingMethods {
 
 	public void method4() {
 		method3();
+		
+		CallingMethods practiceMethodsCalling = new CallingMethods();
+		practiceMethodsCalling.method3();
 	}
 
 	//Another class in same file
-	class ClassB {
+	public class ClassB {
 
 	}
 	
-//	Outside class
-//	1. calling static method from non static method - using className
-//	2. calling static method from static method - using className
-//	3. calling non-static method from non-static method - Creating Object
-//	4. calling non-static method from static method - Creating Object
+	class ClassD {
+		
+	}
+	
+/*
+ Outside class
+	1. calling static method/variable from non static method - using className
+	2. calling static method/variable from static method - using className
+	3. calling non-static method/variable from non-static method - Creating Object
+	4. calling non-static method/variable from static method - Creating Object
+ */
 	
 	public static void test1() {
 		ClassA.m1();
@@ -62,7 +77,8 @@ public class CallingMethods {
 }
 
 
-class ClassA {
+//public class ClassA {
+	 class ClassA {
 	
 	public static void m1() {
 		
