@@ -16,12 +16,14 @@ public class Returntype1 {
 //		String boughtSoap = "Lux";
 		obj.buySoap1(100);
 		int balanceAmount = obj.buySoap1(75);
+		System.out.println(balanceAmount+"*************");
 		System.out.println(obj.buySoap(100));
 		obj.balAmount = obj.buySoap1(75);
 		
 		balAmt = obj.buySoap1(75);
 		
 		int reValue = obj.buySoap2(20);
+		System.out.println(reValue);
 	}
 	
 	public void buyRice() {
@@ -37,6 +39,8 @@ public class Returntype1 {
 		
 //		return 0;
 //		return a;
+//		return a1;
+//		return b1;
 		return a1+ b1;
 	}
 	

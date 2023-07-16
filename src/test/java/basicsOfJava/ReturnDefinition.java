@@ -18,24 +18,28 @@ public class ReturnDefinition {
 
 	public static void main(String[] args) throws InterruptedException {
 		ReturnDefinition test = new ReturnDefinition();
+//		String hh = test.methodWithReturnType();
 		zz = test.methodWithReturnType();
 		test.method1();
 		test.method2();
 //		Object testObject = new Object(); 
-		Object testObject = test.methodWithReturnTypeAsObject(); // this line is nothing but about line;
-		testObject.wait();
+//		Object testObject = test.methodWithReturnTypeAsObject(); // this line is nothing but about line;
+//		testObject.wait();
 
 	}
 
 	public String methodWithReturnType() {
 		String test = "Sathya";
+		int a = 10;
 		System.out.println(test);
 		return test;
+//		return a;
 //		return "Sathya";
 //		System.out.println("Abc");
 	}
 
 	public void method1() {
+//		methodWithReturnType();
 //		String xx = methodWithReturnType();
 		System.out.println(zz);
 //		doing some other work in this method by getting the value from the above method
@@ -44,8 +48,8 @@ public class ReturnDefinition {
 	}
 
 	public void method2() {
-//		String yy = methodWithReturnType();
-		System.out.println(zz);
+		String yy = methodWithReturnType();
+//		System.out.println(zz);
 	}
 
 	public Object methodWithReturnTypeAsObject() {
@@ -80,5 +84,20 @@ public class ReturnDefinition {
 		String testName = "Sathya";
 		return testName;
 	}
+	
+	public ReturnDefinition method8() {
+		
+		return null;
+		
+	}
+	
+	public inter method9() {
+		return null;
+		
+	}
 
+}
+
+interface inter {
+	
 }

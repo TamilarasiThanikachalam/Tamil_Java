@@ -2,6 +2,9 @@ package basicsOfJava;
 
 public class X2ClassVariableAsParameter {
 	
+	
+//	we can use class level variable to bring local variable value out side of method.
+	
 //	Class level variables
 	int a = 10;
 	static String str = "Sathya";
