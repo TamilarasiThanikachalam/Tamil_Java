@@ -3,7 +3,7 @@ package interfaceInJava;
 // Normal methods are called concrete methods(with body).
 //Interface can have only abstract methods or body less method
 //Means we can not implement any methods or put body for a method in interface(until Java 1.6?)
-//We can declare variables in interface but we need to initiate it then and there;
+//We can declare variables in interface but we need to initiate it then and there;(until Java 1.5)
 //Variables defined in interfaces are final in nature, means we can not change the value in any of the following classes.
 // We can not create variables or methods with protected or private access modifiers
 //We can not create Object for Interface because it only has Abstract methods. Also we can create object only for classes not for interfaces
@@ -33,26 +33,39 @@ public interface LearnInterface {
 //	static private int c1 = 10;
 //	static protected int d1 = 10;
 
-//	int f;
+//	int f; //during runtime it will throw error "The blank final field f may not have been initialized"
 //	public static int g;
 	
+//	final int f;
 	final int k = 100;
 	static final int k1 = 100;
 	
+//	Object creation
 //	LearnInterface obj1 = new LearnInterface();
 
+//	abstract method or bodyless method
 	public void rule1();
 	public void rule22(int k);
-//	abstract method
 	
 //	public void rrule1() {
 //		
 //	}
 	
-//	public static void rule4();
+//	public static void rule4() { 	
+//	}
+//	public void rule4();
+//	public static void rule4();// not possible EVER.
+	
+	public static void main(String[] args) {
+		rule2();
+	}
 
 	public static void rule2() {
 		System.out.println(a);
+//		a = 101; //runtime error will be thrown "he final field LearnInterface.a cannot be assigned"
+		System.out.println(a);
+		System.out.println(k);
+//		k = 1001;
 		System.out.println(k);
 		System.out.println("I am static method from interface");
 	}
@@ -62,9 +75,26 @@ public interface LearnInterface {
 		System.out.println("I am default method from interface");
 	}
 	
+//	default static void rule33() {
+//		
+//	}
+	
 	
 //	WebDriver
 	RemoteWebDriver
 //	ArrayList
+	
+public interface withinFileAndInterface {
+		
+}
+	
+interface withinFileAndInterface2 {
+	
+}
+
+}
+
+//public interface withinFileButOutsideInterface {
+interface withinFileButOutsideInterface {
 
 }

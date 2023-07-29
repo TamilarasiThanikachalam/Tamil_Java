@@ -13,8 +13,24 @@ public class TestClass1 implements LearnInterface {
 	public static void main(String[] args) {
 		TestClass1 obj = new TestClass1();
 		System.out.println(obj.a);
-//		obj.rule1();
 		obj.method1();
+		obj.rule1();
+		obj.rule22(10);
+		
+		
+//		Calling static method from interface
+		System.out.println(LearnInterface.b1);
+		LearnInterface.rule2();
+		
+//		Calling non static method from interface
+		obj.rule3();
+		
+//		Creating object for a class by giving parent interface as a reference 
+		LearnInterface obj1 = new TestClass1();
+//		obj1.rule1(); //Explain it later
+//		obj1.rule22(a1); //Explain it later
+		obj1.rule3();
+		System.out.println(obj1.k);
 	}
 
 	
@@ -36,6 +52,9 @@ public class TestClass1 implements LearnInterface {
 		System.out.println("I am a non-static, parametized method from interface");
 		
 	}
+
+
+
 
 
 }

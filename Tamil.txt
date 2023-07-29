@@ -832,7 +832,87 @@ Java basic repeat
 
 ******************************************************************
 
-DAY 8(05/16/2023)
+DAY 8(07/19/2023)
 
 Return type in detail
+
+*******************************************************************
+
+DAY 8(07/29/2023)
+
+Basic of Constructor
+
+Interface in Java
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Interface example with WebDriver 
+
+1) Interface as return type
+
+alert().dismiss();
+
+alert().accept();
+
+switchTo().frame(0).get("str");
+
+switchTo().frame(0).switchTo().frame(10);
+
+public class CA implements WebDriver {
+
+public String met1() {
+
+}
+
+CA obj = new CA();
+String str2 = obj.met1();
+
+TargetLocator TL  = obj.switchTo();
+WebDriver WD = TL.frame(0);
+
+obj.switchTo().frame(0);
+
+driver.findElement(By.id(""));
+
+driver.manage().window().maximize();
+
+Options opt = driver.manage();
+Window win = opt.window();
+win.maximize();
+
+driver.manage().window().maximize();
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+2) Interface as a parameter 
+
+WebDriver frame(WebElement frameElement);
+
+3) Class as a return type 
+
+String getCurrentUrl();
+Dimension getSize();
+
+4) Class as a parameter
+
+void to(URL url);
+void get(String url);
+
+5) Example for interface following interface
+
+public interface WebDriver extends SearchContext
+
+6) Example for Class follwing an interface 
+
+public class RemoteWebDriver
+    implements WebDriver,
+        JavascriptExecutor,
+        HasCapabilities,
+        HasVirtualAuthenticator,
+        Interactive,
+        PrintsPage,
+        TakesScreenshot 
+
+*****************************************************************************
+
 
