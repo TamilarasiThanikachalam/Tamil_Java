@@ -915,4 +915,49 @@ public class RemoteWebDriver
 
 *****************************************************************************
 
+DAY 9(07/30/2023)
+
+Abstract class in detail
+
+
+*&&&&&&&&&&&&
+
+Whenever you study a new concept, in that concept include previously studied concepts
+
+If you are studying abstract class, then in that concept, you need check how the below things works
+Variables
+methods (static or non static / parameterized or not / with or without return type)
+Access modifier
+Object 
+Interface
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+OOPs concept
+
+Object Oriented Program means everything in the program is considered as Object
+
+Java is OOP language but not 100% OOPs language. Primitive date type (int, float, etc.), they are not object. 
+
+Root class of Java is Object. Means, if you create any class, Object class is always extended. But it is implicitly used.
+
+public class ClassA {
+
+} 
+
+this is nothing but 
+
+public class ClassA extends Object {
+
+}
+
+OOPs Concepts in Java
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+
+*****************************************************************************
+
 
