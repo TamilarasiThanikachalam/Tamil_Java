@@ -38,18 +38,19 @@ public class InheritanceDemo2 extends InheritanceDemo1 {
 	public static void main(String[] args) {
 		
 		InheritanceDemo2 obj1 = new InheritanceDemo2();
-		obj1.Parentmethod1();
+		
+		obj1.parentMethod1();
 		obj1.childMethod1();
 		
 		childMethod3("abc");
-		Parentmethod3("aaa");
-		InheritanceDemo1.Parentmethod3("aa");
+		parentMethod3("aaa");
+		InheritanceDemo1.parentMethod3("aa");
 		
 		InheritanceDemo1 parentObj = new InheritanceDemo1();
-		parentObj.Parentmethod1();
+		parentObj.parentMethod1();
 		
 		InheritanceDemo1 childParentObj = new InheritanceDemo2();
-		childParentObj.Parentmethod1();
+		childParentObj.parentMethod1();
 		
 //		InheritanceDemo2 parentChildObj = new InheritanceDemo1();
 		

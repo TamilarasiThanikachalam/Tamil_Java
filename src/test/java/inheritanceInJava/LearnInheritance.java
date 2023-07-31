@@ -1,14 +1,5 @@
 package inheritanceInJava;
 
-import org.openqa.selenium.HasCapabilities;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.PrintsPage;
-import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Interactive;
-import org.openqa.selenium.virtualauthenticator.HasVirtualAuthenticator;
-
 public class LearnInheritance implements InheritanceInterface1{
 	
 //	Parent class/ Super class

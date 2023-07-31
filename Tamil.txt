@@ -963,3 +963,38 @@ DAY 10(07/31/2023)
 
 Inheritance concept in detail
 
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+What is Method signature
+
+Method syntax: 
+accessModifier static/non-static returnType methodName(with or without Parameter) {
+
+}
+
+methodName(with or without Parameter) - method signature 
+
+##########################
+
+OOPs - Polymorphism
+
+One thing available in different format.
+
+* depends on 
+	1) inheritance
+	2) object creation
+	3) method signature (method name and parameters(with or without))
+
+
+Two polymorphism - Overloading, overriding 
+
+OverLoading 
+* It happens within a class 
+* Method name should be same and parameters should vary
+
+**********************************************************************************
+
+Overriding
+* It happens between two classes (Parent and child class) - Inheritance concept
+* Method name should be same and parameter also should be same
+

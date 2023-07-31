@@ -1,6 +1,7 @@
 package inheritanceInJava;
 
-public class TestObjectClass extends Object {
+//public class TestObjectClass extends Object {
+	public class TestObjectClass  {
 	
 	int a = 10;
 	
