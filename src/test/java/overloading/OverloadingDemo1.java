@@ -12,7 +12,26 @@ package overloading;
 //		* Means, if two methods have same method signature and have different return types then we will see error as duplicate method.
 //* We can overload static method
 
+//Java Example: String class
+//	* public boolean startsWith(String prefix, int toffset) { }
+//	* public boolean startsWith(String prefix) { }
+//	* public int indexOf(int ch) { }
+//	* public int indexOf(int ch, int fromIndex) { }
+
+
+//Selenium Example:
+//	* WebDriver frame(int index);
+//	* WebDriver frame(String nameOrId);
+//	* WebDriver frame(WebElement frameElement);
+//	* driver.findElement(By.id("string"))
+//	* driver.findElement(By.name("string"))
+//	* driver.findElements(By.id("string"))
+//	* driver.findElements(By.name("string"))
+
+
 public class OverloadingDemo1 {
+	
+//	WebDriver
 
 	int a;
 	String str;
