@@ -6,6 +6,6 @@ public interface TestInterface {
 	
 	
 	
-Object
+//Object
 
 }

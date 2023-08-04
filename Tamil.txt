@@ -998,3 +998,11 @@ Overriding
 * It happens between two classes (Parent and child class) - Inheritance concept
 * Method name should be same and parameter also should be same
 
+********************************************************************************
+
+Day 11 (04/08/2023) 
+
+Use of Constructor 
+
+* Short cuts for selecting word, sentence
+* Navigating through a sentence
