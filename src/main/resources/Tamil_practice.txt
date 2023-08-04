@@ -764,6 +764,190 @@ Ex:
 5. Ignore the unwanted code / File to Remote - Need to create .gitignore without any extension (automatically saved as GITIGNORE FILE))
 and add the folders, documents which not supposed to be pushed to the Remote
 
+6. If we have .class, .project and .pom.xml - We will import --> General --> Existing Project into workspace/
+Just having pom.xml in the project, then import --> Maven --> Existing Maven Projects.
+
+
+***************************************************************************************************: 
+
+Methods in Java
+1) method without return type
+2) method with return type
+3) static method
+4) non static method
+5) parameterized method
+6) Non parameterized method
+
+METHODS CAN BE:
+135
+136
+145
+146
+235
+236
+245
+246
+
+METHODS CAN BE:
+135
+136
+145
+146
+235
+236
+245
+246		
+
+*********************************************************************
+
+DAY 6(05/09/2023)
+
+Git, Eclipse, Maven Basics
+
+****************************************************************
+
+DAY 7(05/13/2023)
+
+Java basics repeat
+
+********************************************************************
+
+DAY 8(05/14/2023)
+
+Java basic repeat
+
+******************************************************************
+
+DAY 8(07/19/2023)
+
+Return type in detail
+
+*******************************************************************
+
+DAY 8(07/29/2023)
+
+Basic of Constructor
+
+Interface in Java
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Interface example with WebDriver 
+
+1) Interface as return type
+
+alert().dismiss();
+
+alert().accept();
+
+switchTo().frame(0).get("str");
+
+switchTo().frame(0).switchTo().frame(10);
+
+public class CA implements WebDriver {
+
+public String met1() {
+
+}
+
+CA obj = new CA();
+String str2 = obj.met1();
+
+TargetLocator TL  = obj.switchTo();
+WebDriver WD = TL.frame(0);
+
+obj.switchTo().frame(0);
+
+driver.findElement(By.id(""));
+
+driver.manage().window().maximize();
+
+Options opt = driver.manage();
+Window win = opt.window();
+win.maximize();
+
+driver.manage().window().maximize();
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+2) Interface as a parameter 
+
+WebDriver frame(WebElement frameElement);
+
+3) Class as a return type 
+
+String getCurrentUrl();
+Dimension getSize();
+
+4) Class as a parameter
+
+void to(URL url);
+void get(String url);
+
+5) Example for interface following interface
+
+public interface WebDriver extends SearchContext
+
+6) Example for Class follwing an interface 
+
+public class RemoteWebDriver
+    implements WebDriver,
+        JavascriptExecutor,
+        HasCapabilities,
+        HasVirtualAuthenticator,
+        Interactive,
+        PrintsPage,
+        TakesScreenshot 
+
+*****************************************************************************
+
+DAY 9(07/30/2023)
+
+Abstract class in detail
+
+
+*&&&&&&&&&&&&
+
+Whenever you study a new concept, in that concept include previously studied concepts
+
+If you are studying abstract class, then in that concept, you need check how the below things works
+Variables
+methods (static or non static / parameterized or not / with or without return type)
+Access modifier
+Object 
+Interface
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+OOPs concept
+
+Object Oriented Program means everything in the program is considered as Object
+
+Java is OOP language but not 100% OOPs language. Primitive date type (int, float, etc.), they are not object. 
+
+Root class of Java is Object. Means, if you create any class, Object class is always extended. But it is implicitly used.
+
+public class ClassA {
+
+} 
+
+this is nothing but 
+
+public class ClassA extends Object {
+
+}
+
+OOPs Concepts in Java
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+
+*****************************************************************************
+DAY 10(07/31/2023)
+
+Inheritance concept in detail
 				
 				
 				
