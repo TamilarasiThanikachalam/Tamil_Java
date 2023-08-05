@@ -1002,7 +1002,77 @@ Overriding
 
 Day 11 (04/08/2023) 
 
-Use of Constructor 
+Constructor Basics 
 
 * Short cuts for selecting word, sentence
 * Navigating through a sentence
+
+*************************************************************************
+
+Day 12 (05/08/2023) 
+
+Constructor use 
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Keywords in Java
+
+access modifiers
+data types
+class, interface, package, abstract
+return types, return
+extends, implements
+new
+if, for, while, do
+
+
+final
+static
+super, super()
+this, this()
+
+static
+ * always belongs to the class
+ * object creation not needed
+ * static members within a class - direct calling
+ * static members outside a class - className.staticMemberName
+ * we can overload static method
+ * we can not override static method
+ * In interface, we can create a methods with body but that method should be either static or default
+ 
+ 
+Final
+ * we have to initiate while declaring
+ * Once value its initalized, we cant change the value at any point
+ * we can use final with variables, methods and class
+ 
+ Super and this keywords
+
+super() and this() 
+
+************************************************************************
+Day 13 (06/08/2023)
+
+Blocks in Java
+
+static block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

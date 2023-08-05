@@ -21,14 +21,14 @@ public class ConstructorUse1 {
 ////		this.y = 50;
 //	}
 	
-	public ConstructorUse1(int y) {
-//		y = y;
-		this.y = y;
-	}
-
-//	public DummyConstructor(int a) {
-//		y = a;
+//	public ConstructorUse1(int y) {
+////		y = y;
+//		this.y = y;
 //	}
+
+	public ConstructorUse1(int a) {
+		y = a;
+	}
 	
 	public static void main(String[] args) {
 
@@ -74,6 +74,17 @@ public class ConstructorUse1 {
 	public void callingNonStaticMethod() {
 		method3();
 		this.method3();
+		System.out.println(a);
+		System.out.println(this.a);
+	}
+	
+	public static void method4() {
+		System.out.println("I am static method");
+	}
+	
+	public void callingStaticMethod() {
+		method4();
+//		this.method4();
 	}
 
 }
