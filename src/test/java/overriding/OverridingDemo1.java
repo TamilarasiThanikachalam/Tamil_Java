@@ -62,6 +62,11 @@ public class OverridingDemo1 extends Parent {
 	public void buyTV(String name) {
 		System.out.println("Buy "+name+ " TV");
 	}
+	
+//	public String testReturn() {
+//		System.out.println("void return");
+//		return null;
+//	}
 
 }
 
@@ -77,6 +82,10 @@ class Parent {
 	
 	public void buyTV(int amount) {
 		System.out.println("Buy TV for amount "+amount);
+	}
+	
+	public void testReturn() {
+		System.out.println("void return");
 	}
 	
 }

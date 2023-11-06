@@ -902,7 +902,7 @@ void get(String url);
 
 public interface WebDriver extends SearchContext
 
-6) Example for Class follwing an interface 
+6) Example for Class following an interface 
 
 public class RemoteWebDriver
     implements WebDriver,
@@ -920,6 +920,24 @@ DAY 9(07/30/2023)
 Abstract class in detail
 
 
+What is the different between interface and abstract 
+
+interface
+	* methods (also tell about static and default) 
+	* variables
+	* inheritance
+	* unimplemented methods of interface
+	* Object creation
+	* how to use static and non static methods
+	
+abstract class
+	* methods (also tell about static and default) 
+	* variables
+	* inheritance
+	* unimplemented methods of interface
+	* Object creation 
+	* how to use static and non static methods
+
 *&&&&&&&&&&&&
 
 Whenever you study a new concept, in that concept include previously studied concepts
@@ -930,6 +948,7 @@ methods (static or non static / parameterized or not / with or without return ty
 Access modifier
 Object 
 Interface
+
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -1057,6 +1076,16 @@ Blocks in Java
 
 static block
 
+
+
+***********************************************************
+DAY14(6/11/2023)
+
+Errors and Exceptions 
+
+try catch finally
+
+Throw, Throws, Throwable
 
 
 

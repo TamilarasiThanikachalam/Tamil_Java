@@ -8,19 +8,25 @@ public class ConstructorPractice_Final {
 	final int interest = 10;
 
 	final int interest1;
+	final int interest2;
 
 	public ConstructorPractice_Final() {
 		this.interest1 = 8;
+		interest2 = 0;
+//		interest = 25;
 		System.out.println("I am constructor");
 	}
 
 	public ConstructorPractice_Final(int interest1) {
 		this.interest1 = interest1;
+		this.interest2 = interest1;
+//		interest2 = interest1;
 		System.out.println("I am constructor");
 	}
 
 	public static void main(String[] args) {
-		ConstructorPractice_Final obj = new ConstructorPractice_Final();
+//		ConstructorPractice_Final obj = new ConstructorPractice_Final();
+		ConstructorPractice_Final obj = new ConstructorPractice_Final(20);
 		System.out.println(obj.a);
 		System.out.println(obj.interest);
 		System.out.println(obj.interest1);

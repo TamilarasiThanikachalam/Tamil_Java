@@ -1,5 +1,8 @@
 package inheritanceInJava;
 
+import java.io.Serializable;
+import java.util.Collection;
+
 public class LearnInheritance implements InheritanceInterface1{
 	
 //	Parent class/ Super class
@@ -9,13 +12,15 @@ public class LearnInheritance implements InheritanceInterface1{
 //	extends and implements are the java keywords, used to achieve inheritance.
 //	For Class to Class inheritance or Interface to Interface or Class to AbstractClass or AbstractClass to Class or Abstract class to Abstract classs - we use extends keyword 
 //		Ex: All the classes we create in Java is extended to Object class
-//		1) Ex: Exception class extends Throwable class
+//			* interface List<E> extends Collection<E>
 //		2) Ex: WebDriver interface extends SearchContext interface
 //		3) Ex: ChromiumDriver class extends RemoteWebDriver class
 //		4) Ex: ChromeDriver class extends ChromiumDriver class
 //	For Class to interface inheritance - we use implements keyword 
 //		1) Ex: Throwable class implements Serializable interface
 //		2) Ex: RemoteWebDriver class implements WebDriver interface
+	
+	
 //	Multiple inheritance in Java 
 //		1) is not possible by using Classes alone. So below line wont work
 //			a) ClassA extends ClassB, ClassC, etc... 
@@ -29,6 +34,7 @@ public class LearnInheritance implements InheritanceInterface1{
 //			b) ClassA implements interface1, interface2 extends ClassB - THIS IS NOT RIGHT ORDER TO WRITE
 //					a) ClassA extends ClassB
 //  				b) ClassA implements interface1, interface2, interface3 
+	
 //	Multilevel inheritance in Java
 //		1) is possible 
 //			a)classA extends ClassB, ClassB extends ClassC
@@ -46,14 +52,14 @@ public class LearnInheritance implements InheritanceInterface1{
 //		ClassC extends ClassA
 	
 //	Where do we use multiple inheritance
-//		public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable
-//  	public interface WebElement extends SearchContext, TakesScreenshot
+//		public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable (java example)
+//  	public interface WebElement extends SearchContext, TakesScreenshot (selenium example)
 //		public class RemoteWebDriver implements WebDriver, JavascriptExecutor,
 //        HasCapabilities,
 //        HasVirtualAuthenticator,
 //        Interactive,
 //        PrintsPage,
-//        TakesScreenshot
+//        TakesScreenshot (selenium example)
 	
 //	Where do we use multilevel inheritance
 //		public class ArithmaticException extends RunTimeException;
