@@ -72,7 +72,7 @@ Personal things
 common things
 
 
-each room is to do a specfic designated work. 
+each room is to do a specific designated work. 
 	each room is called Method.
 	Method in java is to do a specific work
 	Whatever work you do, it should be a method or inside a method
@@ -237,7 +237,7 @@ Variables - shape and count/name
 shape - datatype 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-Datatype: Its a classification of a data, which tells the compiler or interpretor about how the programmer intends to use the data.
+Datatype: Its a classification of a data, which tells the compiler or interpreter about how the programmer intends to use the data.
 
 1) Primitive
 	a) boolean - yes or no OR true or false 
@@ -293,8 +293,8 @@ Types of variables
 1. Local variable - 
 	* Datatype declared/initiated within a method/constructor, for, if    -- block ({...})
 	* scope of local variable is only within the block in which the variable is declared
-	* intialisation of local variable is madatory
-	* local variables can not be static
+	* initialisation of local variable is mandatory
+	* local variables can not be static (static belongs to class)
 	{
 	int a = 10;
 	char c;
@@ -769,6 +769,42 @@ Just having pom.xml in the project, then import --> Maven --> Existing Maven Pro
 
 
 ***************************************************************************************************: 
+Using return we can re-use the processed data in another method.
+example:
+public static String methodWithReturnType(int b) {
+		String str = "Tamil";
+		String str1 = "Mithran";
+		String str4 = str + str1;
+		return str4;
+		
+method with parameters - Used to give values to the variable at runtime in the main function so that we can change input value, 
+instead of searching it.
+
+Example:
+public class ReturnPractice {
+
+	public static void main(String[] args) {
+		ReturnPractice r = new ReturnPractice();
+		r.methodWithoutReturnType(20);
+		//System.out.println(r);
+		r.methodWithoutReturnType(50);
+		String str2 = "Tamil";
+		String str3 = str2 + methodWithReturnType(30);
+		System.out.println(str3);
+		
+		}
+// Below int a value can be changed - called in the main function
+	public void methodWithoutReturnType(int a) {
+		System.out.println("MethodWithoutReturnType");
+		System.out.println(a);
+		methodWithReturnType(100);
+		
+		}
+		
+Refer ReturnPractice prgm example for both the above.
+
+
+
 
 Methods in Java
 1) method without return type

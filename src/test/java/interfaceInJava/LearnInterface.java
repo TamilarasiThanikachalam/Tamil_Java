@@ -6,13 +6,15 @@ package interfaceInJava;
 //We can declare variables in interface but we need to initiate it then and there;(until Java 1.5)
 //Variables defined in interfaces are final in nature, means we can not change the value in any of the following classes.
 // We can not create variables or methods with protected or private access modifiers
+// private - we can use it only inside that class.protected - protected is also we can use it only in the same class and 
+//we cannot inherit the interface so we cannot use protected.
 //We can not create Object for Interface because it only has Abstract methods. Also we can create object only for classes not for interfaces
 //Interface can not have constructors.
 //If a class wants to inherit the property of an Interface, we need to use "implements" keyword.
 //If we want to link a interface with another interface, we need to use "extends" keyword.
 //Whenever a class implements an interface, it will force us to implement all the unimplemented methods in our class
 
-//We can not create a static abstract/bodyless method in an interface but we can create it as a concrete method.
+//We can not create a static abstract/bodyless method in an interface but we can create it as a method.
 //Interface let us to have methods with body but those methods should be either static or default method
 //We can have static method in interface and we can call it in a following class by using interface name.
 //We can access default method in implemented class by using object
@@ -83,6 +85,7 @@ public interface LearnInterface {
 //	WebDriver
 //	RemoteWebDriver
 //	ArrayList
+// chromium
 	
 public interface withinFileAndInterface {
 		
