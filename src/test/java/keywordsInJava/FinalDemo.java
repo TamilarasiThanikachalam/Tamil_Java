@@ -49,7 +49,7 @@ public class FinalDemo extends ParentFinal implements FinalInterface {
 		System.out.println("*******************************");
 		System.out.println("Override check");
 		
-		ParentFinal obj11 = new FinalDemo();
+		ParentFinal obj11 = new FinalDemo(); //Override
 		obj11.method1();
 	}
 

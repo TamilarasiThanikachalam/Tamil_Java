@@ -49,7 +49,7 @@ public class InheritanceDemo2 extends InheritanceDemo1 {
 		InheritanceDemo1 parentObj = new InheritanceDemo1();
 		parentObj.parentMethod1();
 		
-		InheritanceDemo1 childParentObj = new InheritanceDemo2();
+		InheritanceDemo1 childParentObj = new InheritanceDemo2(); //overriding happens here
 		childParentObj.parentMethod1();
 		
 //		InheritanceDemo2 parentChildObj = new InheritanceDemo1();

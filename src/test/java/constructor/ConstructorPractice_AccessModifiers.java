@@ -14,7 +14,7 @@ public class ConstructorPractice_AccessModifiers {
 //	}
 
 	private ConstructorPractice_AccessModifiers() {
-//		Arrays
+		Arrays
 	}
 	
 	protected ConstructorPractice_AccessModifiers(int a) {

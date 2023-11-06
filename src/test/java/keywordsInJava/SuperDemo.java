@@ -48,10 +48,18 @@ public class SuperDemo extends ParentSuperDemo {
 		System.out.println("Non static method of child class");
 		
 		method1();
+		//different ways to calling method1 from parent class from child class
+		super.method4();
 		super.method1();
+		SuperDemo test = new SuperDemo();
+		test.method1();
+		ParentSuperDemo test1 = new ParentSuperDemo();
+		test1.method1();
+		//did not use third object creation type because even if we call parent class method1, override will take place and it will run child class method1
 		
 		method3();
 		super.method3();
+		ParentSuperDemo.method3();
 		
 	}
 	
@@ -92,6 +100,11 @@ class ParentSuperDemo {
 	
 	public static void method3() {
 		System.out.println("I am static parent method");
+	}
+	
+	public void method4() {
+		
+	
 	}
 
 }

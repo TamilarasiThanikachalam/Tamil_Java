@@ -39,3 +39,21 @@ public abstract class DemoAbstract1 implements TestInterface {
 //	public static abstract void method6();
 
 }
+
+abstract class ClassAA {
+	
+	
+	public abstract void method1();
+		
+	
+}
+
+class ClassAB implements TestInterface {
+
+	@Override
+	public void method11() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

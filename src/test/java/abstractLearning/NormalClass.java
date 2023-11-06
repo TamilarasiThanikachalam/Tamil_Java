@@ -24,8 +24,10 @@ public class NormalClass extends DemoAbstract1 {
 		obj.callingConcreteMethodsOfAbstractClass();
 		
 		DemoAbstract1 obj1 = new NormalClass();
+		obj1.method1();
 		
 		TestInterface obj2 = new NormalClass();
+		obj2.method11();
 		
 	}
 
