@@ -222,7 +222,7 @@ Project
 
 * Interface - It contains rules most of the time. Sometimes it does some work too(means method).
 			Interface is always followed by class/classes. 
-			When class follows interface, class should do the rule written in the interface
+			When class follows interface, class should do the rule written in the interfacebject
 
 * package - contains class/classes/interface/interfaces/file/files/folder/folders
 
