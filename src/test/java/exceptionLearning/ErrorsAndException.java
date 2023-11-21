@@ -9,7 +9,7 @@
 //			* trying to get string value from a numeric cell of an excel 
 
 //* Exception - An exception is an unwanted or unexpected event, which occurs during the execution of a program; 
-//* i.e at run time, Exception disrupts the normal flow of the program’s instructions.
+//* i.e at run time, Exception disrupts the normal flow of the programï¿½s instructions.
 //		* If Exception is not handled, program will not continue.
 //		* Exception needs to handled. So that, other line of codes will execute as usual
 //		* To handle an exception, we use try and catch blocks
@@ -36,7 +36,7 @@
 //	5) try, catch, finally
 //	6) try, catch, catch, etc... finally
 //	7) we can not use finally alone
-//	8) try should not be alone, it should be associated with either catch or finally or catches or catch AND finally.
+//	8) try should not be alone, it should be associated with either catch or finally or catches or catch AND finally or catches  AND finally.
 
 //* Exception Hirarchy: https://www.javatpoint.com/exception-handling-in-java
 
@@ -44,12 +44,16 @@ package exceptionLearning;
 
 public class ErrorsAndException {
 
+//	static int result  = 100;
 	static int result;
 
 	public static void main(String[] args) {
 		
 		int a = 40;
 		int b = 0;
+//		result = a/b;
+		
+		//try with multiple catch without finally
 		
 		try {
 			result = a/b;
@@ -77,12 +81,16 @@ public class ErrorsAndException {
 			System.out.println(e.getMessage());
 		}
 		
+		
+		
+//		try with catch and finally 
+		
 		try {
 			result = a/b;
 		}
 		
 		catch(Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println(e.getMessage()+ " 1111");
 		}
 		
 		finally {
@@ -90,18 +98,21 @@ public class ErrorsAndException {
 		}
 		
 		
-		try {
-			result = a/b;
-		}
-		
-		finally {
-			System.out.println("please check your inputs");
-		}
+//		try with finally 
+//		try {
+//			result = a/b;
+//		}
+//		
+//		finally {
+//			System.out.println("please check your inputs");
+//		}
 		
 		
 		System.out.println(result);
 		
 		System.out.println("Coding is continuing");
+		
+		throw new ArithmeticException();
 		
 		
 		
