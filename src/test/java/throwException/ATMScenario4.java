@@ -1,8 +1,6 @@
 
 package throwException;
 
-import java.lang.reflect.MalformedParameterizedTypeException;
-
 import javax.security.auth.RefreshFailedException;
 
 public class ATMScenario4 extends Exception {
@@ -34,8 +32,8 @@ public class ATMScenario4 extends Exception {
 		System.out.println("*************");
 		try {
 			System.out.println("Trying in next Active ATM Machine and entering the pin");
-			throw new MalformedParameterizedTypeException("Pin cannot have all values as zero's");
-		} catch (MalformedParameterizedTypeException m) {
+			throw new RefreshFailedException("Pin cannot have all values as zero's");
+		} catch (RefreshFailedException m) {
 			System.out.println(m.getMessage());
 
 		} catch (Exception e) {
