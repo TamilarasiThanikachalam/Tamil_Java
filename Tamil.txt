@@ -1098,7 +1098,88 @@ DAY16{23/11/2023}
 
 For Loop Practice
 
+debug
+
 ******************************************************************************
+
+DAY17 (28/11/2023)
+
+Switch condition
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Getters and Setters
+
+public class ClassA {
+
+private int a;
+private int b;
+
+method1() {
+I am using 'a' for cal
+}
+
+}
+
+
+public class ClassB {
+
+method2() {
+here I am driving a value and I want that value to be 'a' in classA
+
+}
+
+method3() {
+here I need 'b' for my calculation
+}
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+public class ClassA {
+
+private int a = 10;
+private int b = 20;
+
+
+public int getB() {
+
+return b;
+}
+
+public void setA(int val) {
+	a = val;
+}
+
+
+
+method1() {
+
+I am using 'a' for cal but I need to get 
+}
+
+}
+
+
+public class ClassB {
+
+method2() {
+here I am driving a value and I want that value to be 'a' in classA
+'a' value should be 100;
+
+ClassA obj = new ClassA();
+obj.setA(100};
+}
+
+method3() {
+ClassA obj = new ClassA();
+obj.b; //error 
+
+int valueOfB = obj.getB();
+here I need 'b' for my calculation
+}
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
 
 
 
