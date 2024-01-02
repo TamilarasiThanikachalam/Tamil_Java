@@ -1180,6 +1180,80 @@ here I need 'b' for my calculation
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+DAY18 (2/1/2024)
+
+Scanner
+
+------------------------------------------------
+
+array []
+
+* holds same data type
+* fixed length 
+* index (starts with zero)
+* length 
+
+int a = 10;
+int b = 20;
+int c = 30; 
+
+Syntax 
+
+int[] ar = new int[3];
+int ar[] = new int[3];
+ar[0] = 10;
+ar[1] = 20;
+ar[2] = 30;
+
+int[] ar = {10, 20, 30};
+char cr[]  = {'a', 'b','c'};
+String[] st = new String[2];
+st[0] = "aa";
+st[1] = "bb";
+
+System.out.println(ar);
+@43943989
+
+System.out.println(ar[0]);
+System.out.println(ar[1]);
+System.out.println(ar[2]);
+
+for(int i = 0; i<3; i++) {
+	System.out.println(ar[i]);
+}
+
+for(int i = 0; i<ar.length(); i++) {
+	System.out.println(ar[i]);
+}
+
+for(Car eachCar: HundaiCars)  {
+System.out.println(eachCar);
+}
+
+Output:
+i10
+creta
+i20
+
+for(Mobile each: onePlusMobile) {
+System.out.println(each);
+}
+
+output:
+1+5T
+1+7
+1+11r
+
+for(int each: ar) {
+System.out.println(each);
+}
+
+output:
+10
+20
+30
+
+
 
 
 
