@@ -36,6 +36,13 @@ public class ConstructorPractice_Inheritance extends Parent1 {
 
 }
 
+
+
+
+
+
+
+
 class Parent1 {
 	
 	public Parent1() {
