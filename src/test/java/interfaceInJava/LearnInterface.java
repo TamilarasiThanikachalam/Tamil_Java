@@ -7,7 +7,6 @@ package interfaceInJava;
 //Variables defined in interfaces are final in nature, means we can not change the value in any of the following classes.
 // We can not create variables or methods with protected or private access modifiers
 // private - we can use it only inside that class.protected - protected is also we can use it only in the same class and 
-//we cannot inherit the interface so we cannot use protected.
 //We can not create Object for Interface because it only has Abstract methods. Also we can create object only for classes not for interfaces
 //Interface can not have constructors.
 //If a class wants to inherit the property of an Interface, we need to use "implements" keyword.

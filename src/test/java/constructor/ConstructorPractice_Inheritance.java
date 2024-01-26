@@ -15,7 +15,7 @@ public class ConstructorPractice_Inheritance extends Parent1 {
 //		super('a'); 
 //		ConstructorPractice_Inheritance();
 //		this();
-		this('p');
+//		this('p');
 		System.out.println("I am int parameterized child constructor");
 	}
 	

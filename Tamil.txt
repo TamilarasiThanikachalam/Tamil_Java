@@ -1,3 +1,7 @@
+
+
+
+
 Day 1 (04/27/2023)
 	* Explaining basics of Git and Eclipse
 	* Created git account

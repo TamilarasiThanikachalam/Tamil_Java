@@ -9,7 +9,7 @@ public class CustomException extends Exception {
 
 	public CustomException() {
 		System.out.println("No password Entered");
-//		System.out.println("Password lenth is less/greater than 4 digit");
+//		System.out.println("Password length is less/greater than 4 digit");
 		d = 35;
 	}
 	
