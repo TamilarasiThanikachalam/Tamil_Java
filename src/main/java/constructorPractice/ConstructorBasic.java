@@ -1,4 +1,6 @@
 package constructorPractice;
+//Constructor is used to construct/initialize an object and assign value's to the object's member.
+//Its has same class name as it belongs to and doesnt have any return type.
 
 public class ConstructorBasic {
 	
