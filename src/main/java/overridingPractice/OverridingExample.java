@@ -9,11 +9,16 @@ public class OverridingExample extends OverrideParentClass{
 		
 		OverrideParentClass obj = new OverridingExample();
 		obj.parent();
+// Here even we access the static method using object it is calling the parent method. hence, Overriding not possible in static methods		
+		obj.parent2();
 	}
 //Child class method with same method name as in the parent class
 		public void parent() {
 			System.out.println("ChildMethod");
 			
+		}
+		public static void parent2() {
+			System.out.println("ChildMethod2");
 		}
 
 	}
@@ -23,6 +28,9 @@ class OverrideParentClass{
 //Parent class method
 	public void parent() {
 		System.out.println("ParentMethod");
+	}
+	public static void parent2() {
+		System.out.println("ParentMethod2");
 	}
 }
 
