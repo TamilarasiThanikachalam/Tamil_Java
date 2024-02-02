@@ -1,21 +1,38 @@
 package keywordsInJava;
 
 public class SuperPractice extends ParentClassA{
-//Super() - We create object in the child class with parent as reference, we call parent class method but child class method will be called
-// In this case Super() is used to access the parent class variable and methods.
+//super - We create object in the child class with child as reference, we call parent class method but child class method will be called
+// In this case super is used to access the parent class variable and methods.
 	public void parentClassA() {
 		System.out.println("Child class non static method");
 	}
 	public void parentClassA(int a) {
 		System.out.println("Child class parameterized method");
+		
 	}
 	public static void parentClassA(String str) {
 		System.out.println("Child class static parameterized method");
 	}	
 	
+	public void test22() {
+		super.parentClassA();
+//		super.parentClassA(20);
+		
+	}
 	public static void main(String[] args) {
+		
+		
 		ParentClassA Obj = new SuperPractice();
+//		calling parentclass method, but override will take place.
 		Obj.parentClassA();
+		
+//		To overcome the above override, created new method test22() and called the parent method which we want using super
+//		now we just need to call test22() to get the parent method in the child class if override happens
+		
+		
+		SuperPractice Obj1 = new SuperPractice();
+//		Obj1.parentClassA();
+		Obj1.test22();
 		
 
 	}

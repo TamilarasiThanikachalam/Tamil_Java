@@ -5,7 +5,7 @@ public class ThisMethod {
 	int amount;
 	
 	public ThisMethod() {
-		System.out.println("I am default method");
+		System.out.println("I am default Constructor");
 	}
 	
 	public ThisMethod(int amount) {
