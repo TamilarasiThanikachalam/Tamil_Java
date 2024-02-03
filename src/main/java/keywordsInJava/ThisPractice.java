@@ -12,6 +12,7 @@ public class ThisPractice extends ThisParent{
 public ThisPractice(String str) {
 //	    this();
 		System.out.println(this.str);
+		System.out.println(str);
 		System.out.println("Child class String paraneterized Condtructor");
 	}
 	public void thisPractice() {
