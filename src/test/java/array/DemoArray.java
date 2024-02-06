@@ -170,10 +170,10 @@ public class DemoArray {
 		System.out.println("Please enter int array size: ");
 
 		int arrayS = scan.nextInt();
+		
+		int arr[] = new int[arrayS];
 
 		System.out.println("Please enter " + arrayS + " numbers");
-
-		int arr[] = new int[3];
 
 		for (int i = 0; i < arrayS; i++) {
 			arr[i] = scan.nextInt();

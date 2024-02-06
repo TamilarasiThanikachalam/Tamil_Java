@@ -10,9 +10,17 @@ public class ArrayTesting {
 	char c[] = new char[] {'a', 'b'};
 	int[] d = {1, 2, 3};
 	String s[] = new String[] {"Mithran"};
-//	String[] s1 = new String[2];
-//	s1[0] = "Tamil";
-//	s1[1] = " ";
+	String s1[] = new String[2];
+	
+	int val = 10;
+//	int value;
+//	value = 20;
+	
+	public void stringArray() {
+	String s1[] = new String[2];
+	s1[0] = "Tamil";
+	s1[1] = " ";
+	}
 	
 	public void printIntArrayLength(int a[]) {
 		System.out.println(a.length);
