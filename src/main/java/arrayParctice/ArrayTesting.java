@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ArrayTesting {
 	
 
-	int a[] = new int[3];
+	static int a1[] = new int[3];
 	int[] b = new int[3];
 	char c[] = new char[] {'a', 'b'};
 	int[] d = {1, 2, 3};
@@ -45,8 +45,14 @@ public class ArrayTesting {
 		char d = printCharIndex(arr.c);
 		System.out.println(d);
 		
-		for(int a=0; a<=3; a++) {
+		for(int a=0; a<=5; a++) {
 			System.out.println(a);
+		}
+		
+//		for(int a=0; a<=a1.length; a++) {
+//		for(int a=0; a<=a1.length-1; a++) {
+		for(int a=0; a<a1.length; a++) {
+			System.out.println(a1[a]);
 		}
 		
 		for(char foreach : arr.c) {
@@ -57,8 +63,8 @@ public class ArrayTesting {
 	}
 
 	private void arrayEqual(int i, int j) {
-		boolean b1 = Arrays.equals(a, b);
-		System.out.println(b1);
+//		boolean b1 = Arrays.equals(a, b);
+//		System.out.println(b1);
 		
 	}
 
