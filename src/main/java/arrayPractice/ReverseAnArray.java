@@ -10,7 +10,7 @@ public class ReverseAnArray {
 		Scanner sc = new Scanner(System.in);
 		
 
-		System.out.println("Enetr the array values one by one  " + " ");
+		System.out.println("Enter the array values one by one  " + " ");
 		for (int i = 0; i < arr.length; i++) {
 			if (sc.hasNextInt()) {
 				arr[i] = sc.nextInt();
