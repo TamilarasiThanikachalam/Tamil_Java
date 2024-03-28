@@ -1265,9 +1265,30 @@ DAY19 (07/02/2024)
 array practice
 
 
+*************************************************************
+
+DAY20 (28/03/2024)
+
+MultiDimentional Arrays
+Jagged array
+
+String class demo
+
+String practice and explanation
 
 
+""
+"  "
+"a"
+"4343"
+"Sathya"
+"fsjkf lkdsdk ld;l";
 
+==
+
+check given word is present in the sentence
+
+String immutable
 
 
 
