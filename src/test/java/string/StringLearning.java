@@ -319,7 +319,19 @@ public class StringLearning {
         
 
 
-
+//        str1.replaceAll("Hello", ""); //  Tamil
+//
+//        str1.contains(str);
+//
+//        int a = str.indexOf("m"); //2
+//
+//        char any = str.charAt(1); //a
+//
+//        char[] abc = str.toCharArray();
+//        char[] abc = {'T', 'a', 'm', 'i', 'l'};
+//
+//        String[] arr = str.split("mi");
+//        String[] arr = {"Ta", "l"}
         	
 
         

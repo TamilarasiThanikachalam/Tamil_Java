@@ -738,8 +738,8 @@ Sathya - Stack
 1000 - SCP of Heap memory 
 	
 Object creation for String
-	ClassA obj1 = new ClassA();
-	String Sathya = new String("1000"); //its simple object creation
+	ClassA obj1 = new ClassA(); //its simple object creation
+	String Sathya = new String("1000"); //parameterized object creation
 
 Sathya - Stack memeory
 1000 and methods/variables in String class - Heap memory 
@@ -785,6 +785,8 @@ str			SathyaRanjithRanjith ("Sathya" - will be in SCP but no one is looking for 
 str1 		SathyaRanjith
 str2 		Ranjith
 
+Unused Object "Sathya" in the memory will be cleared after sometime by Java Garbage collection process
+
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 Data types as variables:-
@@ -799,22 +801,22 @@ Based on where we create our data types or variable names, we categories variabl
 ****************************************************************************************
 
 Methods in Java
-1) method without return type
-2) method with return type
-3) static method
-4) non static method
-5) parameterized method
-6) Non parameterized method
+1) method without return type //public void 
+2) method with return type //public int
+3) static method // public static
+4) non static method // public void/int
+5) parameterized method // public static/non-static void/any methodName(datatype variableName)
+6) Non parameterized method public static/non-static void/any methodName()
 
 METHODS CAN BE:
-135
-136
-145
-146
-235
-236
-245
-246
+135 // public static void methodName(datatype variableName)
+136 // public static void methodName()
+145 // public non-static void methodName(datatype variableName)
+146 // public non-static void methodName()
+235 // public static RETURNTYPE methodName(datatype variableName)
+236 // public static RETURNTYPE methodName()
+245 // public non-static RETURNTYPE methodName(datatype variableName)
+246 // public non-static RETURNTYPE methodName()
 
 *********************************************************************
 
