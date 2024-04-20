@@ -61,8 +61,13 @@ public class StringLearning {
 //************* compareTo *************
 // This is return 0 if 2 string are equal else will return some Unicode value's (whereas equal method will return true/false)
 //		System.out.println(str.compareTo(str1));
+//		System.out.println("a".compareTo("A"));
+//		System.out.println("Ta".compareTo("TA"));
+//		System.out.println("Ta".compareTo("Tb"));
+//		System.out.println("Tb".compareTo("Ta"));
+//		System.out.println("a".compareTo("a"));
 //		System.out.println(str1.compareTo(str2));
-//		System.out.println(str4.compareTo(str5));
+//		System.out.println(str4.compareTo(str5));j
 //		System.out.println(str5.compareTo(str6));
 
 //****************compareToIgnoreCase *******************
@@ -72,7 +77,7 @@ public class StringLearning {
 //		System.out.println(str5.compareToIgnoreCase(str6));
 		
 //******************** startsWith ********************
-		String abc = "Sathya";
+//		String abc = "Sathya";
 //		System.out.println(abc.startsWith("S"));
 //		System.out.println(abc.startsWith("s"));
 //		
@@ -81,7 +86,7 @@ public class StringLearning {
 //		System.out.println(abc.startsWith(str6));
 		
 //********************* EndsWith *********************
-		String s1 = "SathyaMithran";
+//		String s1 = "SathyaMithran";
 //		System.out.println(s1.endsWith("n"));
 //		System.out.println(s1.endsWith("N"));
 //		System.out.println(s1.endsWith("a"));
@@ -112,7 +117,7 @@ public class StringLearning {
 		
 		
 //******************* subString ****************
-		String b1 = "Sathya Tamil";
+//		String b1 = "Sathya Tamil";
 		
 //		String s3 = b1.substring(3);
 //		System.out.println(s3);
@@ -125,9 +130,9 @@ public class StringLearning {
 //		System.out.println(b1.subSequence(5, 9)); // returns a Ta as output
 		
 //************** concat *************
-		String s4 = "Tamil";
-		String s5 = "Sathya";
-		String s6 = s4.concat(s5);
+//		String s4 = "Tamil";
+//		String s5 = "Sathya";
+//		String s6 = s4.concat(s5);
 //		System.out.println(s6);
 //		System.out.println(s4.concat(s5));
 		
@@ -144,14 +149,17 @@ public class StringLearning {
 //		System.out.println(s7);
 //		System.out.println(s5.matches(s7));
 		
-//******************* Split ***************
-//		String A1 = "Tamil Mithran";
-//		String[] A2 = A1.split(" ");
+////******************* Split ***************
+//		String A1 = "TamilMithran";
+//		String[] A2 = A1.split("");
+//		for(String eachString: A2) {
+//			System.out.println(eachString);
+//		}
 //		System.out.println(A2);
-////		System.out.println(A1.split("M", 9));
+//		System.out.println(A1.split("M", 9));
 		
 //************ Join ***********
-		String st = "Tamil";
+//		String st = "Tamil";
 //		String st1 = "Mithran";
 //		String st3 = String.join(st, st1);
 //		System.out.println(st3);
@@ -163,13 +171,13 @@ public class StringLearning {
 //		System.out.println(st.toUpperCase());
 		
 //********** trim **************
-		String st4 = "        Mithran       Sathya    ";
-		System.out.println(st4.trim()); // removes leading and trailing white spaces
-		
-//*************** strip ***********
-		System.out.println(st4.strip()); // removes leading and trailing white spaces
-		System.out.println(st4.stripLeading()); // removes leading white spaces
-		System.out.println(st4.stripTrailing()); // removes trailing white spaces
+//		String st4 = "        Mithran       Sathya    ";
+//		System.out.println(st4.trim()); // removes leading and trailing white spaces
+//		
+////*************** strip ***********
+//		System.out.println(st4.strip()); // removes leading and trailing white spaces
+//		System.out.println(st4.stripLeading()); // removes leading white spaces
+//		System.out.println(st4.stripTrailing()); // removes trailing white spaces
 		
 			
 		
