@@ -26,6 +26,38 @@ public class HashMapClass {
 //	 * forEach(), replaceAll() and clone() methods are overridden in HashMap 
 //	 In Maps, we cannot use forEach() method on either keys or values. 
 //	 We can only use for keys and values pair.
+	
+//	HashMap<String, Integer> map = new HashMap<String, Integer>();
+//
+//	map.put("A", 1);
+//	map.put("B", 2);
+//	map.put("A", 3);
+//	map.put("C", 3)
+//	map.put(null, null)
+//	map.put(null, 2)
+//	map.put("D", 3)
+//
+//	Key - String
+//	Value - Integer 
+//
+//	Key - its like Set
+//
+//	duplicates not allowed
+//	null - only one time
+//	keySet()
+//
+//	value - its like List
+//	Duplicates allowed
+//	null - multiple times
+//	value()
+//
+//
+//	entrySet(); provides both(set) key and its respective values
+//
+//	1) set of keys
+//	2) collection of values
+//	3) set of key value pair
+
 
 	public static void main(String[] args) {
 		HashMap<String, Integer> marks = new HashMap<String, Integer>();
@@ -43,13 +75,56 @@ public class HashMapClass {
 		System.out.println("******* Iterating key and values using foreach loop*****");
 		Map<String, Integer> marks10 = new HashMap<String, Integer>();
 		marks10.putAll(marks);
+		
+		Set<String> keys = marks.keySet();
+		for(String each: keys) {
+			System.out.println(each);
+		}
+		
+		Collection<Integer> values = marks.values();
+		for(Integer each: values) {
+			System.out.println(each);
+		}
+		
+		System.out.println("iterator");
+		Set<Entry<String, Integer>>  entrySet = marks.entrySet();
+//		entrySet.get();
+		Iterator<Entry<String, Integer>>  iterator = entrySet.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		
+		System.out.println("*****Iterator usign Map.Entry");
+		Set<Map.Entry<String, Integer>>  entrySet1 = marks.entrySet();
+		Iterator<Map.Entry<String, Integer>>  iterator1 = entrySet.iterator();
+
+		
+		while(iterator1.hasNext()) {
+			Entry<String, Integer> entry = iterator1.next();
+//			System.out.println(entry.getKey());
+//			System.out.println(entry.getValue());
+//			if(null.getKey())
+			
+			if(entry.getKey() == null) {
+//				System.out.println(entry.getValue());
+				continue;
+			}
+		
+//			String key = entry.getKey();
+//			if(key != null && key.equals("English")) {
+			if(entry.getKey() != null && entry.getKey().equals("English")) {
+				System.out.println(entry.getValue());
+			}
+		}
+		
+		
 //		for (Map.Entry<String, Integer> entry1 : marks10.entrySet()) {
 //			System.out.println(entry1.getKey());
 //			System.out.println(entry1.getValue());
 //		}	
 		
-		HashMapClass obj = new HashMapClass();
-		obj.mapPractice();
+//		HashMapClass obj = new HashMapClass();
+//		obj.mapPractice();
 
 	}
 
