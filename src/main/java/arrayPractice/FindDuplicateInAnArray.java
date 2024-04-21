@@ -2,7 +2,7 @@ package arrayPractice;
 
 public class FindDuplicateInAnArray {
 
-	char[] ch = new char[] { 'a', 'b', 'a', 'c', 'b' };
+	char[] ch = new char[] { 'a', 'b', 'a', 'c', 'b', 'b' };
 
 	public static void main(String[] args) {
 		FindDuplicateInAnArray Obj = new FindDuplicateInAnArray();

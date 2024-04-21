@@ -172,6 +172,7 @@ public class ArrayListAndIteratorPractice {
 		}
 		list.hasNext();
 		list.next();
+	
 		
 		list.set("java");
 		for (String string : str6) {
