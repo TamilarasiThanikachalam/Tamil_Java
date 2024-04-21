@@ -62,7 +62,7 @@
 	* Its an ordered collection, which means we can find any element using the index
 	* LIST ALLOWS DUPLICATES 
 	* Classes which extends List Interface are, ArrayList, LinkedList, Vector
-	* Allows multiple null elements
+	* Allows MULTIPLE null elements
 	* Useful methods 
 	* 	includes all methods in Collection interface
 	* 	sort(Comparator<? super E> c)
@@ -163,6 +163,8 @@ public class CollectionInterface  {
 //	ArrayList
 	
 //	Iterable
+	
+//	Collection
 	
 //	Collections
 	

@@ -2,17 +2,15 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Spliterator;
-import java.util.function.Consumer;
 
 public class ArrayListClass {
 	
 //	WebDriver
-	/* ArrayList
+	/* ArrayList - Class
 	 * 	It implements List Interface
 	 * 	Its a resizeable array
 	 * 	Each ArrayList has a capacity and it will increase automatically if we add values more than the given capacity
@@ -76,10 +74,16 @@ public class ArrayListClass {
 	public static void main(String[] args) {
 		
 		ArrayList<String> cars = new ArrayList<String>();
+		
+		System.out.println("Initial size of ArrayList" +cars.size());
+		
 		cars.add("Maruti");
 		cars.add("swift");
-		cars.add("Audi"); 	
-		cars.add(3, "Volvo");
+		cars.add("Audi"); 
+		
+		System.out.println(cars);
+		
+		cars.add(2, "Volvo");
 		cars.add("Maruti");
 		cars.add("Swift");
 		cars.add(null);
@@ -88,6 +92,7 @@ public class ArrayListClass {
 		
 		System.out.println(cars);
 		System.out.println(cars.get(0));
+//		System.out.println(cars.get(9));
 		System.out.println(cars.size());
 		
 		System.out.println("****for loop****");
@@ -100,6 +105,7 @@ public class ArrayListClass {
 			System.out.println(each);
 		}
 		
+		System.out.println("****** After set() method************");
 		cars.set(3, "BENZ");
 		System.out.println(cars);
 		
@@ -115,12 +121,27 @@ public class ArrayListClass {
 		ArrayList<String> cars1 = (ArrayList<String>)cars.clone(); 
 		System.out.println(cars1);
 		
+//		ArrayList<String> cars24 = ArrayList<String>(cars);
+		
 		System.out.println("******forEach method******");
+//		for(String each: cars)
 		cars1.forEach(eachCars1 -> System.out.println(eachCars1)); //lambda expression
 		
 		System.out.println("******forEachRemaining method******");
-		Iterator carsIterator = cars1.iterator();
+		Iterator<String> carsIterator = cars1.iterator();
+//		System.out.println(carsIterator);
+		System.out.println(carsIterator.hasNext());
+		System.out.println("using next() method "+carsIterator.next());
+		System.out.println("*****ForEachRemaining***********");
 		carsIterator.forEachRemaining(eachCars -> System.out.println(eachCars));
+		
+		System.out.println("Testing Iterator ForEachRemaining method");
+		Iterator<String> carsIterator1 = cars1.iterator();
+		System.out.println(carsIterator1.hasNext());
+		carsIterator1.forEachRemaining(eachCars -> System.out.println(eachCars));
+		
+		System.out.println("***********");
+		cars1.forEach(eachCars1 -> System.out.println(eachCars1));
 		
 		System.out.println("******Using Iterator********");
 		Iterator<String> iterator = cars.iterator();
@@ -138,8 +159,12 @@ public class ArrayListClass {
 		
 		
 		ListIterator <String> listIterator = coolStringList.listIterator();
+		
+//		System.out.println("++++" +listIterator.hasPrevious());
+		
 		System.out.println("++++" +listIterator.hasNext());
 		System.out.println("&&&&&&&&&"+listIterator.next());
+//		System.out.println("++++" +listIterator.hasPrevious());
 		
 //		ListIterator <String> listIterator1 = coolStringList.listIterator();
 		while(listIterator.hasNext()) {
@@ -165,6 +190,25 @@ public class ArrayListClass {
 		list.add("Shiva");
 		list.add(0.1f);
 		System.out.println(list);
+		
+//		Object[] obj = coolStringList.toArray();
+		Object[] obj = list.toArray();
+		System.out.println(obj);
+		
+		for(Object each: obj) {
+			System.out.println(each);
+		}
+		
+		System.out.println("Converting array into arrayList");
+		List<Object> list23 = Arrays.asList(obj);
+		System.out.println(list23);
+		
+		
+//		String[] obj2 = (String[]) coolStringList.toArray();
+//		for(String each: obj2) {
+//			System.out.println(each);
+//		}
+		
 		
 	}
 }

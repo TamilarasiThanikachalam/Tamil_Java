@@ -1292,9 +1292,93 @@ check given word is present in the sentence
 
 String immutable
 
+********************************************************************
+
+String buffer 
+String builder 
+
+Wrapper classes
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Collection in Java
 
 
 
+Iterable - Interface
+Collections - interface
+
+List, Set - Interfaces 
+
+List 
+ArrayList
+
+Set 
+HashMap 
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+How collection framework is created
+
+public interface InterA {
+
+public void method1();
+
+public static void method2() {
+
+}
+
+
+}
+
+public interface InterB extends InterA {
+
+public void method1();
+
+public static void method2() {
+
+}
+
+public void method3();
+
+public static void method4() {
+
+}
+
+
+}
+
+public class ClassA implements InterB {
+
+public void method1() {
+}
+
+public static void method2() {
+
+}
+
+public void method3() {
+}
+
+public static void method4() {
+
+}
+
+public void method5() {
+}
+
+}
+
+public class ClassB {
+
+public void method6() {
+	ClassA obj = new ClassA();
+}
+
+}
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 
 
