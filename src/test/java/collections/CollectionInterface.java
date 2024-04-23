@@ -119,7 +119,7 @@
 //	* 	clear();
 //	* 	keySet();
 //	* 	values();
-//	* 	entrySet();
+//	* 	entrySet(); return type:   Set<Map.Entry<K, V>>
 //	* 	A map entry (key-value pair).  The entrySet method returns a collection-view of the map, whose elements are of this class.  The
 //	* 		interface Map.Entry<K, V> {
 //	* 			getKey();

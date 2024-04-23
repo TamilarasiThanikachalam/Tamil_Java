@@ -1378,7 +1378,268 @@ public void method6() {
 
 }
 
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+**********************************************************************
+
+Collection in Java
+
+				
+*************************************************
+
+
+
+ArrayList
+HashSet
+
+*******************************************************
+
+
+
+ArrayList method practice and discussion
+
+Home work
+	* Explain each methods in collection 
+	* How do you print a HashSet in decending order
+	* Get to know about Collections class 
+	* How do you convert Integer into int and vice versa
+	* What is upcasting and downcasting
+	
+*********************************************************************
+
+
+
+ArrayList practice 
+Map concept
+Hash map
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Homework
+
+File readings
+
+1. Text file
+2. Prop file
+3. Config file
+4. Excel file (Apache POI api and Fillo api)
+5. CSV file
+6. SQL Execution
+
+Similarly
+
+You can create any files, delete any files, read or write file
+
+*********************************************************************
+
+Collection revision
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Selenium Basics
+
+Why we need automation
+Benefits
+Different Automation tools and Editor
+Automation tools 
+	* Selenium
+	* UFT (QTP)
+	* PlayWrite
+	* RPA - Robotic process automation
+	
+Editor 
+	* Eclipse
+	* STS - Sprint Tool Suite
+	* InteliJ
+	* Visual Studio
+	
+Front end development tools and backend application tools
+
+Front End:
+	* HTML
+	* CSS
+	* Java, JavaScript
+	* Angular JS
+	* .Net
+	
+Back End
+	* Java/JavaScript/Angular/.Net
+	* Database management
+	* Cloud
+	* Source Code Management tools (SCM) - Git, Bit Bucket, AWS, Azure
+
+Difference between Web Browser and Web application
+	Web Browser
+		* Chrome
+		* Edge
+		* Firefox
+		* HTML Browser
+		* headleass browser
+	Web application
+		* Facebook
+		* Flipkart
+		* HDFC website
+		* Jira
+		
+What and all we see in a browser
+	* URL bar
+	* Minimize button
+	* Maximize button
+	* New tab
+	* Close 
+	* New window
+	* Forward
+	* Backward
+	* Refresh
+	
+* what are the actions we do on a browser
+
+browser open
+url enter
+new tab open
+tab close 
+min 
+max
+entire browser close
+scroll
+zoom
+navigate - back, forward, refresh
+
+With in application what do we do
+
+application launch - url type
+text enter
+button click
+check box click
+radio box click
+drop down
+links click
+Text read/verify
+Tab title
+Mouse hover
+double click
+Right click
+Date choose
+Drag and drop
+File upload
+Verification/Assert 
+page load speed/time(synchronization)
+Keyboard
+pop up
+	alert
+	tab
+	web alert like info screen
+	Desktop window
+frames
+wait
+WebTable
+
+	
+	
+What and all we see in a web application (Textbox, checkbox, drop down, button, radio button, link, text, image, video,..etc)
+What are the actions we do in an application (click, write, drag and drop, scroll)
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+SELENIUM
+
+* Its only for web application automation
+* Selenium is written in many languages such as Java, Python, C#
+
+
+
+Who is WebDriver 
+How to open an application using webDriver
+Session ID
+WindowHandle
+WebDriver focus
+
+Who is tester in Automation? ---- WebDriver(Tester)
+
+Session ID also created when we run WebDriver each time.
+
+Each window has an UNIQUE ID (String) --- Window Handle
+	 its always associated with Set because WindowHandle never have dublicates
+
+Whatever element you see on a web page is called WebElement
+
+What is WebElement
+	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
+	
+	* diff types of tags
+		* html
+		* body
+		* header
+		* input
+		* div
+		* ul
+		* li
+		* a 
+		* svg
+		* select (drop down)
+		* frame or iframe (small html)
+		* table
+			* th 
+			* tr
+			* td
+			
+		* <table>
+			<div>
+				<tr>
+					<th>
+					<th>
+					<th>
+				<tr>
+					<td>
+					<td>
+				<tr>
+					<td>
+					<td>
+
+* attributes
+	whatever key value pair we see inside any tag is called attributes
+	
+	<div> - start tag
+	
+	</div> - end tag
+	
+	<div key1 = "val1" key2 = "val2" > - start tag
+	"text" 
+	</div>
+	
+	where
+	div - tagName
+	key1, key2 - attributes
+	val1, val2 - attribute's value
+	"text" - tag's display name
+
+How to find element in a page 
+
+<html>
+
+ancestor(div)
+  parent(div)
+	parent(ul)
+		child(li)
+			child(select)
+		child(ul)
+			child(li)
+			child(li)
+	parent(ul)
+	parent(li)
+ancestor(div)
+	parent(div)
+		child(div)
+</html>
+
+ancestor
+parent
+child
+siblings
+following ancestor, parent, child, siblings
+preceding ancestor, parent, child, siblings
+text
+contains(text, 'Sathya')
 
 
 
