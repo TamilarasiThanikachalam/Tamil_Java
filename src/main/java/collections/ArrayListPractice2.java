@@ -38,11 +38,16 @@ public class ArrayListPractice2 {
 		arr.add(120);
 		arr.add("abc");
 		
+		System.out.println("Remove method****************");
+		arr.remove(2);
+		System.out.println(arr);
+		
 		ListIterator list = arr.listIterator();
 		list.hasNext();
-		System.out.println(list.next());
+		System.out.println("Next element " +list.next());
 //		System.out.println(list.next());
 		list.remove();
+		System.out.println("After Remove1 " +arr);
 		list.forEachRemaining(eachList -> System.out.println(eachList));
 		
 		System.out.println("****remove()****");
