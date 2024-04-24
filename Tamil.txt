@@ -1641,7 +1641,130 @@ preceding ancestor, parent, child, siblings
 text
 contains(text, 'Sathya')
 
+********************************************************************
 
+We find elements in a page using locators 
+
+Locators in selenium - 
+	locator value should not be duplicate. must be unique
+		means, id = "sathya" should be present only once
+
+id 
+	* most preferred 
+	* do not use if it has numbers in it. 
+	* id = "abc123"; - DO NOT USER
+		* if we reload again, the id value may change to "abc114"
+name
+className
+	* with more spaces 
+tagName
+linkText
+partialLinkText
+CSS selector
+xpath -XML path
+
+
+id, name, className(class) - when these values are unique we can use them directly. When they are not unique, we use either xpath or CSS
+
+findElement(By.id(""));
+findElement(By.name(""));
+findElement(By.class(""));
+findElement(By.linkText("selenium"));
+findElement(By.linkText("Testing Frameworks"));
+findElement(By.linkText("Logging Frameworks"));
+findElement(By.parialLinkText("Frameworks"));
+
+
+	By obj1 = By.className("");
+		WebElement ele = driver.findElement(obj1);
+		ele.click();
+		
+		driver.findElement(By.className("")).click();;
+		
+		driver.findElement(By.id("")).sendKeys();
+
+* when id, name, className attributes are present in an element tag but they not unique, then we go to xpath 
+* When id, name, className attributes are not present inside an element's tag, then also we use xpath
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+XPath
+
+XPATH - xml path
+
+two types of xpath
+
+absolute xpath - steps 
+	* uses single slash - /html/body/header/div/nav/a[1]
+	/html/body/div/div/div[2]/div/ul/li/div/div[2]/a
+	/html/body/div/div/div[2]/div/ul/li[1]/div/div[2]/a
+	
+	* If there is a change in UI, the above order will change and we can not find our desired element 
+		using the above xpath. 
+	* So using this xpath is  NOT RECOMMENDED.
+	
+relative xpath - lift
+	* uses double slash
+	
+crocs.in
+
+* Basic syntax
+		//tagName[@attribute = 'value']
+		(//span[@class='menuLink-title-J7d'])[1]
+		(//*[@class='menuLink-title-J7d'])[1]
+		
+		https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/
+		//a[@href = '/index.html']
+		driver.findElement(By.xpath("//a[@href = '/index.html']"));
+		
+		//a[@href = "/index.html"]
+		driver.findElement(By.xpath("//a[@href = "/index.html"]"));
+		driver.findElement(By.xpath("//a[@href = /"/index.html/"]"));
+
+* text
+//tagName[text() = 'value']
+
+* and 
+//span[text() = 'Women' and @class='menuLink-title-J7d']
+
+* or 
+//span[@std ='first' or @class='menuLink-title-J7d'] 
+
+//span[text()= 'Classic Crush White Unisex Clog']
+
+//span[contains(text(), 'Classic Crush White Unisex Clog')]
+
+
+//a[@class = 'item-name-suo']/span[contains(text(), 'Classic Crush White Unisex Clog')]
+
+//tagName[contains(@attribute, 'value')]
+
+following
+following-child
+following-parent
+preceding
+preceding-child
+preceding-parent
+ancestor
+
+
+//tagName[@attribute = 'value']//following::tagName
+
+When element is not found - we get elementNotFoundException
+
+Why element is not found, because we wrongly identified the element
+1) spelling mistake
+2) flow mistake
+3) xpath wrong
+
+StaleElementException
+	* Element is available in DOM but not visible in UI
+		
+https://www.guru99.com/xpath-selenium.html#text
+https://www.guru99.com/locators-in-selenium-ide.html
+
+
+**********************************************************************
 
 
 
