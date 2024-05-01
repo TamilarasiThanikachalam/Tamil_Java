@@ -3,18 +3,24 @@ package seleniumBasics;
 import java.time.Duration;
 import java.util.Set;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import dev.failsafe.internal.util.Assert;
 
 public class BasicSeleniumCode {
 	
 	public void Test() {
-		WebDriver driver  = new ChromeDriver();
+//		RemoteWebDriver;
+//		WebDriver driver  = new ChromeDriver();
+//		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new EdgeDriver();
 		
 		By obj1 = By.className("");
 		WebElement ele = driver.findElement(obj1);
