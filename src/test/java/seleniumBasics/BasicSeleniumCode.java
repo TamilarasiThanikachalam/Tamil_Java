@@ -32,12 +32,19 @@ public class BasicSeleniumCode {
 	}
 
 	public static void main(String[] args) throws Exception {
-//		C:\Users\LENOVO\git\Class\JavaPractice\src\test\resources\drivers\chromedriver_114.exe
-//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\LENOVO\\git\\Class\\JavaPractice\\src\\test\\resources\\drivers\\chromedriver_114.exe");
+		System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\drivers\\chromedriver_125.exe");
+		WebDriver driver = new ChromeDriver();
+	}
+	
+	
+	public void seleniumBasic() {
+
+//		C:\Users\LENOVO\git\Tamil_Java\src\test\resources\drivers\chromedriver_125.exe
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\LENOVO\\git\\Tamil_Java\\src\\test\\resources\\drivers\\chromedriver_125.exe");
 //		System.out.println(System.getProperty("user.dir"));
 //		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\chromedriver_114.exe");
 		
-		System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\drivers\\chromedriver_114.exe");
+		System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\drivers\\chromedriver_125.exe");
 		WebDriver driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();
@@ -62,6 +69,7 @@ public class BasicSeleniumCode {
 //		link_SupportHeader_chat; --recommended
 //		headerLink_Support_Chat;
 		
+	
 	}
 	
 	public void test123() throws InterruptedException {

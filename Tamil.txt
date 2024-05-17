@@ -1767,12 +1767,115 @@ https://www.guru99.com/locators-in-selenium-ide.html
 **********************************************************************
 
 
+How to use selenium in Eclipse 
+1. We have add selenium dependency in our project
+ 
+
+Hirarchy 
+* SearchContext Interface (findElement, findElements)
+* WebDriver Interface ( Basic methods for a browser) 
+* RemoteWebDriver Class( all basic methods are implemented here)
+* Classes ChromeDriver, FirefoxDriver, etc.. 
+
+
+interface SearchContext {
+
+}
+
+interface WebDriver extends SearchContext {
+
+}
+
+class RemoteWebDriver implements WebDriver {
+
+}
+
+class ChromeDriver extends RemoteWebDriver {
+
+}
+
+ 
+
+SearchContext 
+ 1) WebElement findElement(By by) 
+ 		WebDriver.findElement(By.id(""));
+ 		WebDriver.findElement(By.xpath("//strong[text() =  'ChromeDriver 108.0.5359.22']");
+ 
+ 2) List<WebElement> findElements(By by)
+ 		List<WebElement> allElements = WebDriver.findElements(By.id(""));
+ 		for(WebElement eachElement : allElelments) {
+ 		}
+
+* By class 
+
+* WebElement Interface
+
+What is WebElement 
+	* It is a interface which follows SearchContext (In Java)
+	* Whatever element you see on a web page is called WebElement (For understanding)
+	
+click();
+submit();
+sendKeys();
+clear();
+getTagName();
+getDomAttribute();
+getAttribute();
+isSelected();
+isEnabled();
+getText();
+findElement();
+findElements();
+isDisplayed();
+getLocation();
+getSize();
+getRect();
+getCssValue();
+
+WebDriver - interface
+
+* WebDriver is nothing but us(TESTERs).
+* The main properties of a browser are created as methods inside WebDriver interface
+
+
+get()
+  * In this method only we pass application URL
+getCurrentUrl()
+	* It gives currently focused window's URL. So that we can validate against requirement that, URL is correct 
+close()
+ 	* Closes the currently focused window
+quit()
+	* Closes all the window's opened during the session
+getPageSource()
+	*
+
+@override
+findElement()
+findElements()
+
+getTitle()
+	* Gives the title of the window (tab tile) 
+getWindowHandle()
+	* It gives current window's handle
+	* Its good practice to use getWindowHandle() method, before using getWindowHandles() method
+	* This methods return type is String
+	
+getWindowHandles()
+	* It gives all window's handles opened during that session
+	* This methods return type is Set<String>
+
+*********************************************************************************************
+
 TargetLocator switchTo()
 	WebDriver frame(int index);
 	WebDriver frame(String nameOrId);
 	WebDriver frame(WebElement frameElement);
 	WebDriver parentFrame();
 
+	TargetLocator TL = WebDriver.switchTo();
+	TL.frame(0);
+	
+	WebDriver.switchTo().frame(0);
 	
 	1) find the frame - means identify the element for the frame
 		- we can identify the frame using 3 things.
@@ -1810,6 +1913,15 @@ switchTo().frame()
 switchTo().window()
 switchTo().alert()
 switchTo().newWindow()
+
+
+TargetLocator TL = WebDriver.switchTo();
+	Alert al = TL.alert();
+	al.accept();
+	
+	WebDriver.switchTo().alert().accept();
+	
+
 switchTo().alert().dismiss();
 switchTo().alert().accept();
 switchTo().alert().getText().toUpperCase();
@@ -1826,7 +1938,7 @@ Navigation navigate();
 WebDriver.navigate().back();
 WebDriver.navigate().to("www.faceBook.com");
 	
-Option manage()
+Options manage()
 	* Timeouts timeouts()
 		* implicitWait()
 	* Window window()
@@ -1836,6 +1948,22 @@ Option manage()
 		* fullScreen()
 	* getCookies()
 	* deleteCookies()
+	
+	
+	Options opt = WebDriver.manage();
+	TimeOuts TO = opt.timeouts();
+	TO.implicitlyWait(Duration abc);
+	
+	WebDriver.manage().timeouts().implicitlyWait(Duration);
+	
+	
+	Window Wo = opt.window();
+	Wo.maximize();
+	
+	WebDriver.manage().window().maximize();
+	
+	
+	opt.getCookies();
 
 ************************************************************************************
 RemoteWebDriver
