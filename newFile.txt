@@ -1,0 +1,3 @@
+To read a file
+Using
+File Reader class
