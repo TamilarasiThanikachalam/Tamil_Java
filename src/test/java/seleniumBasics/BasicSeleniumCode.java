@@ -1,7 +1,9 @@
 package seleniumBasics;
 
 import java.time.Duration;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -9,6 +11,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -16,7 +19,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ReadingFromPropertyFile.ReadFromProperty;
-import dev.failsafe.internal.util.Assert;
 
 public class BasicSeleniumCode {
 
@@ -38,12 +40,20 @@ public class BasicSeleniumCode {
 	}
 
 	public static WebDriver driver;
+
 	public static void main(String[] args) throws Exception {
 		
-		BasicSeleniumCode BSC = new BasicSeleniumCode();
+		ChromeOptions options = new ChromeOptions();
+		
+		Map<String, Object> pref = new LinkedHashMap<>();
+//		pref.put("profile.default_content_settings.popups", 0);
+		options.addArguments("--disable-notifications");
+		pref.put("profile.default_content_setting_values.notifications", 2);
+		options.setExperimentalOption("prefs", pref);
+
 		System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\drivers\\chromedriver_125.exe");
 //		WebDriver driver = new ChromeDriver();
-		 driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://jqueryui.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -62,54 +72,48 @@ public class BasicSeleniumCode {
 		System.out.println(link_About.isDisplayed());
 		System.out.println(link_About.isEnabled());
 		System.out.println(link_About.isSelected());
-		
+
 		System.out.println(link_About.getAttribute("id"));
 		System.out.println(link_About.getAttribute("href"));
-		
+
 		System.out.println(link_About.getDomProperty("id"));
 		System.out.println(link_About.getDomProperty("href"));
-		
-		if(titleOfThePage.equalsIgnoreCase("jQuery UI")) {
+
+		if (titleOfThePage.equalsIgnoreCase("jQuery UI")) {
 			System.out.println("We are in correct page!");
-		}
-		else 
+		} else
 			System.out.println("Oops! We are in a wrong page!!!");
-		
+
 //		System.out.println(link_About.getText());
-		
+
 //		driver.findElement(By.xpath("//a[text() = 'Demos']")).click();
 //		driver.getTitle();
 //		WebElement link_Blog = driver.findElement(By.xpath("//a[text() = 'Blog']"));
 //		link_Blog.click();
 //		driver.getTitle();
-		
-		Thread.sleep(5);
-		
-		List<WebElement> menuLinks = driver.findElements(By.xpath("//ul[@id = 'menu-top']//li"));
-		for(WebElement eachMenu: menuLinks) {
-//			System.out.println(eachMenu.getText());
+
+		Thread.sleep(10);
+
+		List<WebElement> menuLinks = driver.findElements(By.xpath("//ul[@id = 'menu-top']//li/a"));
+		for (WebElement eachMenu : menuLinks) {
+			System.out.println(eachMenu.getText());
 //			BSC.waitForElementToBeClickable(eachMenu, 60);
 			Thread.sleep(3);
 			eachMenu.click();
-			driver.getTitle();
 		}
-		
-		
+
 //		driver.close();
 	}
-	
-	public void  waitForElementToBeClickable(WebElement ele, long seconds) {
-		WebDriverWait explicitWait = new  WebDriverWait(driver, Duration.ofSeconds(seconds));
+
+	public void waitForElementToBeClickable(WebElement ele, long seconds) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(ele));
 	}
-	
+
 //	public void  waitForElementToBeClickable(WebElement ele, long seconds) {
 //		WebDriverWait explicitWait = new  WebDriverWait(driver, Duration.ofSeconds(seconds));
 //		explicitWait.until(ExpectedConditions.elementSelectionStateToBe(ele));
 //	}
-	
-	
-	
 
 //	public Duration testDurationParameter() {
 //		Duration dur = Duration.ofSeconds(0);

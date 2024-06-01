@@ -2032,3 +2032,36 @@ How to download driver.exe file for chrome
 
 Selenium Basic code
 
+****************************************************************************
+
+
+* Window Handling
+
+Session ID - its for driver
+Window Handle - its for a window/tab
+
+* each window has a unique id - window handle
+
+getWindowHandle();
+getWindowHandles();
+
+*****************************************************************************
+
+Window Handle practice
+
+switch to all Windows
+close all windows 
+switch to child window 
+close all child window 
+switch to desired window based on its title
+switch to desired window based on element present in that page
+
+****************************************************************************************
+
+Alerts
+
+*****************************************************************************
+
+Frames
+
+*****************************************************
