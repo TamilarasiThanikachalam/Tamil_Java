@@ -13,7 +13,7 @@ public class FramePractice {
 	public static void main(String[] args) {
 				
 		System.setProperty("webdriver.chrome.driver", 
-				"C:\\\\Users\\\\TAMIL\\\\Downloads\\\\chromedriver-win64\\\\chromedriver-win64\\\\chromedriver.exe");
+				"C://Users//TAMIL//Downloads//chromedriver-win64//chromedriver-win64//chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.tutorialspoint.com/selenium/practice/frames.php");
 		driver.manage().window().maximize();
@@ -29,13 +29,13 @@ public class FramePractice {
 		driver.switchTo().defaultContent();
 		WebElement iframe2 =  driver.findElement(By.xpath("//iframe[@src='new-tab-sample.php'][2]"));
 		driver.switchTo().frame(iframe2);
-		driver.findElement(By.xpath("//a[@href = 'https://www.tutorialspoint.com']")).click();
+		driver.findElement(By.xpath("//a[@href = 'https://www.tutorialspoint.com']")).click();  
 		
 		
 
 	}
 	
-		
+//	https://chercher.tech/practice/frames	
 	
 
 }
