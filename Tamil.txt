@@ -2064,4 +2064,21 @@ Alerts
 
 Frames
 
-*****************************************************
+**************************************************************
+
+DropDown
+
+**********************************************************
+
+String recall 
+String str = "Sathya"; (location 1)
+String str1 = "Sathya"; (location 1)
+String str2 = "Tamil"; (location 2)
+
+str.EIC(Str1); true
+str.EIC(Str2); //false 
+
+str == str1 //true
+str == str2 //false
+
+******************************************************************

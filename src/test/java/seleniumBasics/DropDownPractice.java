@@ -1,6 +1,7 @@
 package seleniumBasics;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -9,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+
+//https://browserstack.com/guide/handling-dropdown-in-selenium-without-select-class
 
 public class DropDownPractice {
 	static WebDriver driver;
@@ -19,24 +22,58 @@ public class DropDownPractice {
 	}
 
 	public static void main(String[] args) throws Exception {
+		DropDownPractice DDW = new DropDownPractice();
+		DDW.TC_ExampleForDropDownWithoutSelectClass("Highest to lowest");
+	}
+
+	public void TC_GetSelectedDropDownValues() {
+		DropDownPractice DDW = new DropDownPractice();
+
+		ArrayList<String> options = new ArrayList<String>();
+		options.add("Eclipse");
+		options.add("IntelliJ IDEA");
+
+		openChromeBrowser("https://www.hyrtutorials.com/p/html-dropdown-elements-practice.html");
+
+		WebElement DD_IDEName = driver.findElement(By.id("ide"));
+//		DDW.chooseMultipleValuesFromDropDown(DD_IDEName, "Eclipse", "IntelliJ IDEA");
+//		DDW.chooseMultipleValuesFromDropDown(DD_IDEName, "Eclipse", "");
+
+		DDW.chooseMultipleValuesFromDropDown(DD_IDEName, options);
+
+		// return selected options names
+		System.out.println(DDW.getAllSelectedValues(DD_IDEName));
+
+	}
+
+	public void TC_ExampleForDropDownWithoutSelectClass(String sortDropDownValue) {
+		DropDownPractice DDW = new DropDownPractice();
+
+		openChromeBrowser("https://www.bstackdemo.com/");
+
+		List<WebElement> allSortOptions = driver.findElements(By.xpath("//div[@class = 'sort']//option"));
+
+		for (WebElement each : allSortOptions) {
+//			if(each.getText()==sortDropDownValue) {
+			// Lowest to Highest == memory location or address of "Lowest to Highest" (xys894389)
+			if (each.getText().equalsIgnoreCase(sortDropDownValue)) { 
+				//Lowest to Highest.equalIgnoreCase("Lowest to Highest")
+				each.click();
+				break;
+			}
+		}
+	}
+
+	public static void openChromeBrowser(String url) {
+		// Open Chrome Browser (exe file location, initializing chromeDriver, max, open
+		// application, implicitWait)
 		System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\drivers\\chromedriver_125.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.hyrtutorials.com/p/html-dropdown-elements-practice.html");
+		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		
-//		WebElement courseDropDown = driver.findElement(By.id("course"));
-//		courseDropDown.click();
-		
-		List<WebElement>  allOptions = driver.findElements(By.xpath("//select[@id='course']//option"));
-		for(WebElement eachOption: allOptions) {
-			if(eachOption.getText().equalsIgnoreCase("Python")) {
-				eachOption.click();
-			}
-		}
-		
 	}
-	
+
 	public static void dropDownUsingSelectClass() throws Exception {
 		System.setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\drivers\\chromedriver_125.exe");
 		driver = new ChromeDriver();
@@ -98,7 +135,7 @@ public class DropDownPractice {
 		}
 
 	}
-	
+
 	public void validateAnOptionPresentInDropDown(WebElement ele, String optionName) {
 		Select select = new Select(ele);
 		List<WebElement> courseAllOptions = select.getOptions();
@@ -109,7 +146,7 @@ public class DropDownPractice {
 				System.out.println("Given option: " + optionName + " is NOT present in the drop down");
 		}
 	}
-	
+
 	public void chooseOptionFromDropDownWithoutUsingSelectClass(String xpath, String optionName) {
 //		List<WebElement>  allOptions = driver.findElements(By.xpath("//select[@id='course']//option"));
 //		for(WebElement eachOption: allOptions) {
@@ -117,25 +154,25 @@ public class DropDownPractice {
 //				eachOption.click();
 //			}
 //		}
-		
-		List<WebElement>  allOptions = driver.findElements(By.xpath(xpath));
-		for(WebElement eachOption: allOptions) {
-			if(eachOption.getText().equalsIgnoreCase(optionName)) {
+
+		List<WebElement> allOptions = driver.findElements(By.xpath(xpath));
+		for (WebElement eachOption : allOptions) {
+			if (eachOption.getText().equalsIgnoreCase(optionName)) {
 				eachOption.click();
 			}
 		}
-		
+
 	}
-	
+
 //	List<WebElement>  allOptions = driver.findElements(By.xpath(xpath));
 	public void chooseOptionFromDropDownWithoutUsingSelectClass(List<WebElement> elements, String optionName) {
-		
-		for(WebElement eachOption: elements) {
-			if(eachOption.getText().equalsIgnoreCase(optionName)) {
+
+		for (WebElement eachOption : elements) {
+			if (eachOption.getText().equalsIgnoreCase(optionName)) {
 				eachOption.click();
 			}
 		}
-		
+
 	}
 
 	public void getFirstSelectedOption(WebElement ele) {
@@ -151,6 +188,50 @@ public class DropDownPractice {
 	public void deSelectOptionByIndex(WebElement ele, int index) {
 		Select select = new Select(ele);
 		select.deselectByIndex(index);
+	}
+
+	public List<String> getAllSelectedValues(WebElement dropDown) {
+		Select select = new Select(dropDown);
+		List<WebElement> allSelectedOptions = select.getAllSelectedOptions();
+
+		String value = null;
+		List<String> selectedOptionsList = new ArrayList<String>();
+
+		int totalSelectedOptions = allSelectedOptions.size();
+		if (totalSelectedOptions > 0) {
+			System.out.println("The total options selected is " + totalSelectedOptions);
+			for (WebElement eachOption : allSelectedOptions) {
+				value = eachOption.getText();
+				selectedOptionsList.add(value);
+			}
+		} else
+			System.out.println("No options were selected");
+
+//		return allSelectedOptions;
+		return selectedOptionsList;
+	}
+
+	public void chooseMultipleValuesFromDropDown(WebElement dropDownElement, String option1Name, String option2Name) {
+		// Locate drop down - IDE Name
+		Select select = new Select(dropDownElement);
+
+		// Choose Multiple drop down in IDE Name drop down
+		if (select.isMultiple()) {
+			select.selectByVisibleText(option1Name);
+			select.selectByVisibleText(option2Name);
+		}
+	}
+
+	public void chooseMultipleValuesFromDropDown(WebElement dropDownElement, ArrayList<String> optionsToBeSelected) {
+		// Locate drop down - IDE Name
+		Select select = new Select(dropDownElement);
+
+		// Choose Multiple drop down in IDE Name drop down
+		if (select.isMultiple()) {
+			for (String each : optionsToBeSelected) {
+				select.selectByVisibleText(each);
+			}
+		}
 	}
 
 }
