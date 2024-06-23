@@ -24,18 +24,21 @@ public class WaitPractice {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://jqueryui.com/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10));
+//		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		String parentWindow = driver.getWindowHandle();
 		System.out.println(parentWindow);
 		
 		List<WebElement> allMenu = driver.findElements(By.xpath("//ul[@id = 'menu-top']//li//a"));
-//https://stackoverflow.com/questions/50088777/how-to-click-child-links-of-each-menu-in-selenium-with-java		
+//https://stackoverflow.com/questions/50088777/how-to-click-child-links-of-each-menu-in-selenium-with-java	
+		
 		for (int i = 0; i <= allMenu.size(); i++) {
 	        List<WebElement> links = driver.findElements(By.xpath("//ul[@id = 'menu-top']//li//a"));
 	        WebElement menuLinks = links.get(i);
 	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20));
 			wait.until(ExpectedConditions.elementToBeClickable(menuLinks));
+			
 			menuLinks.click();
 		}
 		driver.close();
