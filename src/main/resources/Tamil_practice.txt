@@ -987,7 +987,7 @@ Inheritance concept in detail
 				
 ********************************************************************************				
 				
-GitHub Practice				
+GitHub Practice	and merge conflicts			
 				
 				
 				
